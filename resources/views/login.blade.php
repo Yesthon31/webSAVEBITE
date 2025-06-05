@@ -122,22 +122,49 @@
 
     <div class="container">
         <h1>Login</h1>
-        <form action="{{ url('/login') }}" method="POST">
+        <form action="{{ url('/login') }}" method="POST" class="login-form">
             @csrf
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" 
+                    value="{{ old('username') }}"
+                    class="form-control @error('username') is-invalid @enderror" 
+                    required 
+                    minlength="3"
+                    autocomplete="username">
+                @error('username')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
             
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                    class="form-control @error('password') is-invalid @enderror" 
+                    required 
+                    minlength="8"
+                    autocomplete="current-password">
+                @error('password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
 
-            <button type="submit">Login</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
 
         @if(session('error'))
-            <p class="error">{{ session('error') }}</p>
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
         @endif
 
-        <p>Belum punya akun? <a href="{{ url('/register') }}">Daftar di sini</a></p>
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <p class="mt-3">Belum punya akun? <a href="{{ url('/register') }}">Daftar di sini</a></p>
 
         <div class="footer">
             <p>© 2025 SaveBite. All rights reserved.</p>
