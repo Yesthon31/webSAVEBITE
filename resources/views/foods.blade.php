@@ -548,10 +548,10 @@
         if (foodToDelete !== null) {
             $.ajax({
                 url: '/foods/' + foodToDelete,
-                method: 'DELETET',
+                method: 'POST',
                 data: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                    'Content-Type': 'application/json'
+                    _method: 'DELETE'
                 },
                 success: function(response) {
                     $('#delete-confirmation').html('<div class="success-message">Food deleted successfully!</div>');
