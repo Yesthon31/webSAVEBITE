@@ -513,10 +513,16 @@
                     ingredients: ingredients
                 }),
                 success: function(response) {
-                    console.log('Response:', response); // Debug log
+                    console.log('Response:', response); 
                     var recipeContent = $('#recipe-result');
                     if (response && response.recipe) {
-                        var formattedRecipe = response.recipe.replace(/\n/g, '<br>');
+                        var rawRecipe = response.recipe;
+                        // Remove markdown formatting
+                        rawRecipe = rawRecipe.replace(/\*\*/g, ''); 
+                        rawRecipe = rawRecipe.replace(/\*/g, '');  
+                        rawRecipe = rawRecipe.replace(/#/g, '🧾');   
+
+                        var formattedRecipe = rawRecipe.replace(/\n/g, '<br>');
                         recipeContent.html(formattedRecipe).fadeIn();
                     } else {
                         recipeContent.html('<p>No recipe generated. Please try again.</p>').fadeIn();
