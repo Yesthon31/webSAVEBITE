@@ -598,7 +598,7 @@
 
             function fetchEvents(start, end, timezone, callback) {
                 $.ajax({
-                    url: '{{ url('/foods-calender') }}',
+                    url:'/foods-calender',                   
                     method: 'GET',
                     success: function(data) {
                         if (!Array.isArray(data)) {
