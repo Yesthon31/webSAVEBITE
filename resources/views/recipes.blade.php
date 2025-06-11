@@ -208,7 +208,7 @@
                         ?>
                         {!! nl2br(e($cleanedRecipe)) !!}
                     </div>
-                    <form action="{{ route('recipes.delete', $recipe['id']) }}" method="POST" style="margin-top: 1rem;">
+                    <form action="https://web-production-56c4.up.railway.app/recipes/{{ $recipe['id'] }}" method="POST" style="margin-top: 1rem;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-delete">
