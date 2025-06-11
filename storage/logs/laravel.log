@@ -39610,3 +39610,1470 @@ By Chef SaveBite
 "}} 
 [2025-06-03 10:21:16] local.INFO: Chat request received: {"message":"aytam goreng"} 
 [2025-06-03 10:21:18] local.INFO: Chat response received: {"status":200,"body":"{\"response\":\"Ayam goreng merupakan hidangan yang lezat.  Dari SaveBite, kami menyarankan Anda untuk memperhatikan keamanan pangan agar tetap sehat.\\n\\nBerikut informasi mengenai ketahanan ayam goreng:\\n\\n- **Ketahanan di suhu ruang:**  Maksimum 2 jam.  Setelah itu, bakteri dapat berkembang biak dengan cepat dan menyebabkan keracunan makanan.\\n\\n- **Ketahanan di kulkas:** 3-4 hari.  Pastikan ayam goreng disimpan dalam wadah kedap udara.\\n\\n- **Tips penyimpanan:** Segera dinginkan ayam goreng setelah dimasak.  Simpan dalam wadah kedap udara di kulkas.  Hindari menyimpan ayam goreng dalam suhu ruang lebih dari 2 jam.  Untuk menjaga kualitas dan keamanan pangan, sebaiknya konsumsi ayam goreng dalam waktu 3-4 hari setelah dimasak.\\n\"}"} 
+[2025-06-06 16:56:36] local.INFO: Recipe request: {"ingredients":[{"id":26,"quantity":4},{"id":12,"quantity":2}]} 
+[2025-06-06 16:56:47] local.ERROR: Recipe error: {"message":"cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/recipe","trace":"#0 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#1 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#2 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(803): Illuminate\\Http\\Client\\PendingRequest->send('POST', 'https://golangt...', Array)
+#3 D:\\tugas Binus\\savebite\\app\\Http\\Controllers\\GolangApiController.php(605): Illuminate\\Http\\Client\\PendingRequest->post('https://golangt...', Array)
+#4 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\GolangApiController->addRecipe(Object(Illuminate\\Http\\Request))
+#5 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GolangApiController), 'addRecipe')
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#8 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#51 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#52 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#53 {main}"} 
+[2025-06-06 16:57:02] local.INFO: Recipe request: {"ingredients":[{"id":26,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-06 16:57:06] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Bakar Susu Keju
+
+Resep ini memanfaatkan ayam dan susu untuk menciptakan rasa yang unik dan lezat.  Susu memberikan kelembutan pada daging ayam, sementara tambahan keju akan menambah cita rasa gurih yang menggiurkan.
+
+**Bahan-bahan:**
+
+* 1 ekor ayam ukuran sedang, potong menjadi 8 bagian
+* 250 ml susu cair (bisa pakai susu full cream atau UHT)
+* 50 gr keju cheddar, parut
+* 2 siung bawang putih, cincang halus
+* 1 ruas jahe, cincang halus
+* 2 batang serai, memarkan
+* 3 lembar daun salam
+* 1 sdt garam
+* 1/2 sdt merica bubuk
+* 1/4 sdt ketumbar bubuk
+* Minyak untuk memanggang
+
+
+**Cara Membuat:**
+
+1. **Marinasi Ayam:** Campur susu, bawang putih, jahe, serai, daun salam, garam, merica, dan ketumbar bubuk dalam wadah. Masukkan potongan ayam dan aduk rata hingga semua bagian ayam terendam. Marinasi minimal selama 30 menit, semakin lama semakin meresap.
+2. **Panggang Ayam:** Panaskan sedikit minyak di atas teflon atau panggangan.  Panggang ayam hingga matang dan kecokelatan, bolak-balik agar matang merata.  Sekitar 5-7 menit per sisi, tergantung ketebalan potongan ayam dan panas api.
+3. **Taburi Keju:**  Setelah ayam matang, taburi dengan keju parut di atasnya.  Tutup teflon atau panggangan sebentar agar keju meleleh.
+4. **Sajikan:** Angkat ayam dan sajikan selagi hangat.  Bisa disajikan dengan nasi putih dan sambal kesukaan.
+
+
+**Tips:**
+
+* Untuk rasa yang lebih kaya, bisa ditambahkan sedikit kecap manis atau saus tiram saat marinasi.
+* Jika suka pedas, bisa ditambahkan cabai rawit yang diiris halus ke dalam marinasi.
+* Anda bisa menggunakan jenis keju lain sesuai selera, seperti mozzarella atau parmesan.
+
+
+By Chef SaveBite
+
+"}} 
+[2025-06-06 16:57:25] local.INFO: Recipe request: {"ingredients":[{"id":21,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-06 16:57:29] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"Resep Nasi Goreng Susu (Eksperimental!)
+
+Ini resep yang unik dan mungkin tidak untuk semua orang, karena menggabungkan nasi goreng dengan susu.  Resep ini lebih eksperimental dan hasilnya mungkin mengejutkan!  Jangan berharap rasa nasi goreng klasik.
+
+**Bahan:**
+
+* 1 porsi Nasi Goreng (bisa pakai resep favoritmu, gunakan nasi dingin)
+* 1 gelas Susu (susu sapi biasa, dingin.  Bisa dicoba dengan susu UHT atau susu evaporasi untuk tekstur berbeda)
+
+**Cara Membuat:**
+
+1. Siapkan nasi goreng sesuai resep favoritmu.  Jangan terlalu kering,  sedikit lembab akan lebih mudah bercampur dengan susu.
+2. Setelah nasi goreng matang, pindahkan ke mangkuk.
+3. Secara perlahan, tuangkan susu ke dalam nasi goreng.  Jangan langsung menuangkan semuanya sekaligus.  Tuang sedikit demi sedikit sambil diaduk rata.
+4. Aduk hingga susu tercampur rata dengan nasi goreng.  Teksturnya akan menjadi lebih creamy dan lembab.  Rasanya akan sedikit manis dan gurih.
+
+**Catatan:**
+
+* Hasil akhir akan bergantung pada jenis susu yang digunakan dan resep nasi goreng yang kamu pilih.
+* Mungkin rasa asin dari nasi goreng akan sedikit berkurang dan digantikan dengan rasa creamy dari susu.
+* Jika rasa terlalu hambar, kamu bisa menambahkan sedikit kecap manis atau garam sesuai selera.
+* Eksplorasi! Cobalah dengan berbagai jenis susu dan bumbu tambahan untuk menemukan kombinasi rasa yang pas untukmu.
+
+Ini adalah resep eksperimental, jadi bersiaplah untuk kejutan rasa yang mungkin tak terduga.  Selamat mencoba!
+
+
+By Chef SaveBite
+
+"}} 
+[2025-06-07 02:51:51] local.INFO: Recipe request: {"ingredients":[{"id":26,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-07 02:51:55] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Panggang Susu Lembut
+
+**Bahan:**
+
+* 1 ekor ayam ukuran sedang (sekitar 1.5 kg), bersihkan dan potong sesuai selera (bisa utuh atau dipotong menjadi beberapa bagian)
+* 500 ml susu cair (salah satu jenis susu, bisa full cream, UHT, atau rendah lemak)
+* 2 sendok makan garam
+* 1 sendok teh merica hitam bubuk
+* 1 sendok teh bawang putih bubuk
+* 1 sendok teh jahe bubuk
+* 1/2 sendok teh kunyit bubuk (opsional, untuk warna dan aroma)
+* 2 sendok makan minyak sayur atau margarin
+
+
+**Cara Membuat:**
+
+1. Campurkan susu, garam, merica, bawang putih bubuk, jahe bubuk, dan kunyit bubuk (jika menggunakan) dalam sebuah wadah yang cukup besar. Aduk rata hingga bumbu larut.
+2. Masukkan potongan ayam ke dalam campuran susu dan bumbu. Pastikan ayam terendam seluruhnya.  Diamkan minimal 2 jam di dalam lemari es, lebih lama lebih baik (bisa sampai semalaman).  Marinasi ini akan membuat ayam menjadi lebih lembut dan beraroma.
+3. Panaskan oven hingga suhu 180 derajat Celcius.
+4. Keluarkan ayam dari marinasi.  Jangan membuang marinasi, bisa digunakan untuk menyiram ayam selama proses memanggang.
+5. Letakkan ayam di atas loyang yang sudah diolesi minyak sayur atau margarin.
+6. Panggang ayam selama 60-75 menit, atau hingga ayam matang sempurna dan berwarna kecokelatan.  Siram ayam dengan sisa marinasi setiap 20 menit sekali agar ayam tetap lembab dan tidak kering.  Untuk memastikan ayam matang, tusuk bagian paling tebal dengan garpu.  Jika keluar cairan bening, berarti ayam sudah matang.
+7. Setelah matang, angkat ayam dari oven dan diamkan selama 10 menit sebelum dipotong dan disajikan.  Hal ini memungkinkan ayam mempertahankan kelembapannya.
+
+
+**Tips:**
+
+* Anda bisa menambahkan bahan lain ke dalam marinasi, seperti daun rosemary, thyme, atau oregano untuk rasa yang lebih kompleks.
+* Untuk hasil yang lebih crispy, olesi ayam dengan sedikit madu atau kecap manis sebelum memanggang pada 15 menit terakhir.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"}} 
+[2025-06-07 03:21:00] local.INFO: Recipe request: {"ingredients":[{"id":26,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-07 03:21:04] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Panggang Susu Creamy
+
+**Bahan:**
+
+* 1 ekor ayam ukuran sedang (sekitar 1-1.5 kg), potong sesuai selera
+* 1 liter susu cair (bisa pakai susu UHT full cream atau susu evaporasi, sesuai selera)
+* 2 siung bawang putih, cincang halus
+* 1 ruas jahe, cincang halus
+* 2 sdm kecap manis
+* 1 sdm kecap asin
+* 1 sdt garam
+* 1/2 sdt merica bubuk
+* 1/4 sdt pala bubuk
+* 2 sdm minyak goreng
+
+**Cara membuat:**
+
+1. Lumuri ayam dengan garam, merica, dan pala bubuk. Diamkan selama 15 menit agar bumbu meresap.
+2. Panaskan minyak goreng dalam panci atau wajan besar. Tumis bawang putih dan jahe hingga harum.
+3. Masukkan ayam yang telah dilumuri bumbu, lalu goreng hingga sedikit kecoklatan. Angkat dan sisihkan.
+4. Tuang susu cair ke dalam panci, tambahkan kecap manis dan kecap asin. Aduk rata.  Bumbui dengan garam secukupnya (sesuaikan dengan selera dan garam yang sudah digunakan sebelumnya).
+5. Masukkan ayam yang telah digoreng ke dalam panci berisi kuah susu.  Aduk rata.
+6. Didihkan kuah, lalu kecilkan api dan biarkan ayam masak hingga empuk dan kuah mengental (kurang lebih 30-45 menit, tergantung ukuran ayam).  Sesekali balik ayam agar terendam kuah susu.
+7. Setelah ayam matang dan kuah mengental, angkat ayam dan sajikan dengan kuah susu yang kental dan creamy.
+
+**Tips:**
+
+* Anda bisa menambahkan bahan lain seperti kentang, wortel, atau brokoli untuk menambah variasi.
+* Untuk rasa yang lebih gurih, Anda bisa menambahkan sedikit kaldu ayam.
+* Sajikan selagi hangat dengan nasi putih hangat.
+
+
+By Chef SaveBite
+
+"}} 
+[2025-06-07 03:24:58] local.INFO: Recipe request: {"ingredients":[{"id":26,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-07 03:25:02] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Panggang Susu Lembut
+
+**Bahan-bahan:**
+
+* 1 ekor ayam ukuran sedang (sekitar 1,5 kg), dibersihkan dan dipotong sesuai selera (bisa utuh, potong 8, atau potong dadu)
+* 500 ml susu cair (bisa susu sapi, susu UHT, atau susu almond)
+* 2 siung bawang putih, haluskan
+* 1 sdt garam
+* 1/2 sdt merica hitam bubuk
+* 1/4 sdt pala bubuk (opsional)
+* 2 sdm minyak sayur atau olive oil
+
+
+**Cara Membuat:**
+
+1. **Marinasi Ayam:** Dalam wadah yang cukup besar, campur susu, bawang putih halus, garam, merica, dan pala (jika pakai). Aduk rata. Masukkan potongan ayam ke dalam campuran susu, pastikan ayam terendam seluruhnya. Marinasi minimal 30 menit, semakin lama semakin meresap.  Untuk rasa yang lebih maksimal, marinasi semalaman di kulkas.
+2. **Memanggang Ayam:** Panaskan oven pada suhu 180°C (350°F).  Olesi loyang dengan sedikit minyak. Keluarkan ayam dari marinasi, biarkan sisa marinasi menetes. Tata ayam di loyang.  
+3. **Panggang:** Panggang ayam selama 45-60 menit, atau hingga matang dan kecokelatan.  Untuk ayam utuh, waktu memanggang mungkin lebih lama, sekitar 1-1.5 jam. Sesuaikan waktu memanggang sesuai ukuran ayam dan oven Anda.  Siram ayam dengan sisa marinasi sesekali selama memanggang agar ayam tetap lembap.
+4. **Penyelesaian:** Setelah matang, angkat ayam dari oven. Biarkan ayam sedikit dingin sebelum dipotong dan disajikan.
+
+**Tips:**
+
+* Untuk rasa yang lebih gurih, tambahkan 1 sdm kecap manis atau madu ke dalam marinasi.
+* Anda bisa menambahkan sayuran seperti kentang, wortel, atau brokoli ke dalam loyang bersama ayam untuk dipanggang bersamaan.
+* Untuk tekstur ayam yang lebih crispy, olesi ayam dengan sedikit madu atau kecap manis sebelum dipanggang di menit-menit terakhir.
+
+
+Selamat mencoba!
+
+By Chef SaveBite
+
+"}} 
+[2025-06-07 03:25:17] local.INFO: Recipe request: {"ingredients":[{"id":20,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-07 03:25:21] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Goreng Creamy Susu (Kreasi Chef SaveBite)
+
+Resep ini menggabungkan kelembutan ayam goreng dengan kejutan creamy dari susu, menciptakan rasa yang unik dan menggugah selera.
+
+**Bahan:**
+
+* 1 ekor ayam goreng (sudah matang, bisa pakai ayam goreng siap saji)
+* 1 gelas susu cair (salah satu jenis, sesuai selera, bisa UHT, full cream, atau skim)
+* 1 sdm tepung terigu (opsional, untuk kekentalan saus)
+* 1 siung bawang putih, cincang halus
+* 1/2 bawang bombay, cincang halus
+* 1/4 sdt merica bubuk
+* Garam secukupnya
+* Minyak goreng secukupnya
+* Daun bawang, iris tipis (untuk taburan)
+
+
+**Cara Membuat:**
+
+1. **Membuat Saus Creamy:** Panaskan sedikit minyak goreng dalam wajan. Tumis bawang putih dan bawang bombay hingga harum.
+2. **Menambahkan Susu:** Tuang susu cair ke dalam wajan. Tambahkan merica bubuk dan garam secukupnya. Aduk rata.
+3. **Menebalkan Saus (opsional):**  Jika ingin saus lebih kental, larutkan tepung terigu dengan sedikit air hingga membentuk pasta.  Tambahkan pasta tepung terigu ke dalam saus susu sambil terus diaduk hingga mengental.
+4. **Menambahkan Ayam Goreng:** Masukkan ayam goreng ke dalam saus susu. Aduk perlahan hingga ayam terbalut saus dengan merata.  Biarkan hingga saus meresap ke dalam ayam dan sedikit mengental.  
+5. **Penyelesaian:** Angkat ayam goreng creamy susu. Tata di atas piring saji. Taburi dengan irisan daun bawang.
+
+
+**Tips & Trik:**
+
+* Untuk rasa yang lebih kaya, bisa ditambahkan sedikit keju parut atau krim kental saat membuat saus.
+*  Anda bisa menyesuaikan jumlah susu sesuai selera, untuk saus yang lebih atau kurang creamy.
+* Ayam goreng bisa diganti dengan ayam bakar atau ayam rebus, tetapi teksturnya akan sedikit berbeda.
+
+
+**Selamat Mencoba!**
+
+by Chef SaveBite
+
+"}} 
+[2025-06-07 03:38:16] local.INFO: Chat request received: {"message":"nasi goreng"} 
+[2025-06-07 03:38:20] local.INFO: Chat response received: {"status":200,"body":"{\"response\":\"Selamat siang!  Terima kasih telah menghubungi SaveBite.  Berikut informasi mengenai nasi goreng:\\n\\n**Ketahanan di suhu ruang:** Nasi goreng sebaiknya dikonsumsi segera setelah dimasak.  Ketahanannya di suhu ruang sangat terbatas, kurang dari 2 jam, terutama jika suhu lingkungan panas.  Setelah itu, risiko pertumbuhan bakteri meningkat.\\n\\n**Ketahanan di kulkas:**  Nasi goreng yang telah didinginkan dapat disimpan di kulkas selama maksimal 2 hari.  Namun, kualitas rasa dan teksturnya akan berkurang seiring waktu.\\n\\n**Tips penyimpanan:**  Untuk menjaga keamanan dan kualitas nasi goreng, segera dinginkan setelah dimasak dan simpan dalam wadah kedap udara di kulkas.  Hindari menyimpan nasi goreng dalam suhu ruang dalam jangka waktu lama.  Pastikan nasi goreng dingin sebelum dimasukkan ke dalam kulkas untuk mencegah pertumbuhan bakteri.  Jika ragu dengan kesegaran nasi goreng, sebaiknya jangan dikonsumsi.\\n\"}"} 
+[2025-06-07 03:46:36] local.INFO: Recipe request: {"ingredients":[{"id":12,"quantity":1}]} 
+[2025-06-07 03:46:40] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"Karena hanya ada satu bahan yaitu susu, pilihan resepnya sangat terbatas.  Kita akan membuat minuman sederhana: **Susu Hangat Manis**
+
+**Bahan:**
+
+* 1x Susu (jumlah sesuai selera, bisa segelas atau satu kotak)
+
+**Alat:**
+
+* Panci kecil (jika ingin dipanaskan)
+* Cangkir atau gelas
+
+**Cara Membuat:**
+
+1. **(Opsional) Panaskan susu:**  Jika Anda menyukai susu hangat, tuangkan susu ke dalam panci kecil. Panaskan di atas api kecil sambil diaduk sesekali hingga hangat.  Jangan sampai mendidih.
+2. **Tuang susu:** Tuangkan susu hangat (atau dingin langsung dari kemasan) ke dalam cangkir atau gelas.
+3. **Tambahkan pemanis (opsional):**  Tambahkan gula pasir, madu, atau pemanis lainnya sesuai selera. Aduk hingga larut.
+
+
+**Tips:**
+
+* Untuk rasa yang lebih kaya, gunakan susu full cream.
+* Tambahkan sedikit bubuk kayu manis atau vanili untuk aroma yang lebih harum.
+
+
+Selamat menikmati susu hangat manis Anda!
+
+By Chef SaveBite
+
+"}} 
+[2025-06-07 03:56:22] local.ERROR: cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/recipes {"exception":"[object] (Illuminate\\Http\\Client\\ConnectionException(code: 0): cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/recipes at D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php:940)
+[stacktrace]
+#0 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#1 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#2 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(771): Illuminate\\Http\\Client\\PendingRequest->send('GET', 'https://golangt...', Array)
+#3 D:\\tugas Binus\\savebite\\app\\Http\\Controllers\\GolangApiController.php(573): Illuminate\\Http\\Client\\PendingRequest->get('https://golangt...')
+#4 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\GolangApiController->getRecipes()
+#5 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GolangApiController), 'getRecipes')
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#8 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#51 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#52 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#53 {main}
+
+[previous exception] [object] (GuzzleHttp\\Exception\\ConnectException(code: 0): cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/recipes at D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php:275)
+[stacktrace]
+#0 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php(205): GuzzleHttp\\Handler\\CurlFactory::createRejection(Object(GuzzleHttp\\Handler\\EasyHandle), Array)
+#1 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php(157): GuzzleHttp\\Handler\\CurlFactory::finishError(Object(GuzzleHttp\\Handler\\CurlHandler), Object(GuzzleHttp\\Handler\\EasyHandle), Object(GuzzleHttp\\Handler\\CurlFactory))
+#2 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlHandler.php(47): GuzzleHttp\\Handler\\CurlFactory::finish(Object(GuzzleHttp\\Handler\\CurlHandler), Object(GuzzleHttp\\Handler\\EasyHandle), Object(GuzzleHttp\\Handler\\CurlFactory))
+#3 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\Proxy.php(28): GuzzleHttp\\Handler\\CurlHandler->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#4 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\Proxy.php(48): GuzzleHttp\\Handler\\Proxy::GuzzleHttp\\Handler\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#5 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1340): GuzzleHttp\\Handler\\Proxy::GuzzleHttp\\Handler\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1306): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1292): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#8 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php(35): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#9 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(38): GuzzleHttp\\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#10 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php(71): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#11 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(63): GuzzleHttp\\RedirectMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#12 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\HandlerStack.php(75): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#13 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(333): GuzzleHttp\\HandlerStack->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#14 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(169): GuzzleHttp\\Client->transfer(Object(GuzzleHttp\\Psr7\\Request), Array)
+#15 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(189): GuzzleHttp\\Client->requestAsync('GET', Object(GuzzleHttp\\Psr7\\Uri), Array)
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1138): GuzzleHttp\\Client->request('GET', 'https://golangt...', Array)
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(906): Illuminate\\Http\\Client\\PendingRequest->sendRequest('GET', 'https://golangt...', Array)
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(771): Illuminate\\Http\\Client\\PendingRequest->send('GET', 'https://golangt...', Array)
+#21 D:\\tugas Binus\\savebite\\app\\Http\\Controllers\\GolangApiController.php(573): Illuminate\\Http\\Client\\PendingRequest->get('https://golangt...')
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\GolangApiController->getRecipes()
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GolangApiController), 'getRecipes')
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#67 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#68 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#69 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#70 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#71 {main}
+"} 
+[2025-06-07 03:57:03] local.ERROR: cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/foods {"exception":"[object] (Illuminate\\Http\\Client\\ConnectionException(code: 0): cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/foods at D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php:940)
+[stacktrace]
+#0 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#1 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#2 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(771): Illuminate\\Http\\Client\\PendingRequest->send('GET', 'https://golangt...', Array)
+#3 D:\\tugas Binus\\savebite\\app\\Http\\Controllers\\GolangApiController.php(360): Illuminate\\Http\\Client\\PendingRequest->get('https://golangt...')
+#4 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\GolangApiController->getFoodsCalendarApi()
+#5 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GolangApiController), 'getFoodsCalenda...')
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#8 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#51 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#52 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#53 {main}
+
+[previous exception] [object] (GuzzleHttp\\Exception\\ConnectException(code: 0): cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://golangtes-production.up.railway.app/foods at D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php:275)
+[stacktrace]
+#0 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php(205): GuzzleHttp\\Handler\\CurlFactory::createRejection(Object(GuzzleHttp\\Handler\\EasyHandle), Array)
+#1 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php(157): GuzzleHttp\\Handler\\CurlFactory::finishError(Object(GuzzleHttp\\Handler\\CurlHandler), Object(GuzzleHttp\\Handler\\EasyHandle), Object(GuzzleHttp\\Handler\\CurlFactory))
+#2 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlHandler.php(47): GuzzleHttp\\Handler\\CurlFactory::finish(Object(GuzzleHttp\\Handler\\CurlHandler), Object(GuzzleHttp\\Handler\\EasyHandle), Object(GuzzleHttp\\Handler\\CurlFactory))
+#3 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\Proxy.php(28): GuzzleHttp\\Handler\\CurlHandler->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#4 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\Proxy.php(48): GuzzleHttp\\Handler\\Proxy::GuzzleHttp\\Handler\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#5 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1340): GuzzleHttp\\Handler\\Proxy::GuzzleHttp\\Handler\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1306): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1292): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#8 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php(35): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#9 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(38): GuzzleHttp\\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#10 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php(71): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#11 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(63): GuzzleHttp\\RedirectMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#12 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\HandlerStack.php(75): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#13 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(333): GuzzleHttp\\HandlerStack->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#14 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(169): GuzzleHttp\\Client->transfer(Object(GuzzleHttp\\Psr7\\Request), Array)
+#15 D:\\tugas Binus\\savebite\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(189): GuzzleHttp\\Client->requestAsync('GET', Object(GuzzleHttp\\Psr7\\Uri), Array)
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(1138): GuzzleHttp\\Client->request('GET', 'https://golangt...', Array)
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(906): Illuminate\\Http\\Client\\PendingRequest->sendRequest('GET', 'https://golangt...', Array)
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(771): Illuminate\\Http\\Client\\PendingRequest->send('GET', 'https://golangt...', Array)
+#21 D:\\tugas Binus\\savebite\\app\\Http\\Controllers\\GolangApiController.php(360): Illuminate\\Http\\Client\\PendingRequest->get('https://golangt...')
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): App\\Http\\Controllers\\GolangApiController->getFoodsCalendarApi()
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GolangApiController), 'getFoodsCalenda...')
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(211): Illuminate\\Routing\\Route->runController()
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(808): Illuminate\\Routing\\Route->run()
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#67 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#68 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#69 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#70 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#71 {main}
+"} 
+[2025-06-07 03:58:49] local.INFO: Login Statistics: {"today":"2025-06-07 00:00:00","todayLogins":9,"weeklyLogins":[0,0,10,8,0,11,9],"sample_log_date":"2025-06-07 10:58:48"} 
+[2025-06-07 03:59:05] local.INFO: Starting permission check {"permission":"view_users","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 03:59:05] local.INFO: Super admin access granted  
+[2025-06-07 03:59:36] local.INFO: Starting permission check {"permission":"view_users","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 03:59:36] local.INFO: Super admin access granted  
+[2025-06-07 03:59:52] local.INFO: Starting permission check {"permission":"view_food","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 03:59:52] local.INFO: Super admin access granted  
+[2025-06-07 04:00:33] local.INFO: Login Statistics: {"today":"2025-06-07 00:00:00","todayLogins":9,"weeklyLogins":[0,0,10,8,0,11,9],"sample_log_date":"2025-06-07 10:58:48"} 
+[2025-06-07 04:00:36] local.INFO: Starting permission check {"permission":"view_login_logs","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 04:00:36] local.INFO: Super admin access granted  
+[2025-06-07 04:10:58] local.INFO: Recipe request: {"ingredients":[{"id":20,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-07 04:11:01] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Goreng Saus Susu Creamy
+
+**Bahan-bahan:**
+
+* 1 ekor ayam goreng (bisa pakai ayam goreng siap saji atau ayam goreng hasil masakan sendiri)
+* 1 gelas susu cair (bisa susu sapi, susu UHT, atau susu kental manis, sesuai selera)
+* 1 sdm tepung terigu
+* 1 sdt bawang putih bubuk
+* ½ sdt garam
+* ¼ sdt merica bubuk
+* 1 sdm margarin/mentega
+* Daun bawang iris (optional, untuk taburan)
+
+**Cara Membuat:**
+
+1. **Siapkan Saus:** Dalam mangkuk kecil, campur susu cair, tepung terigu, bawang putih bubuk, garam, dan merica bubuk. Aduk rata hingga tidak ada gumpalan.
+2. **Masak Saus:** Panaskan margarin/mentega dalam wajan di atas api sedang. Tuang campuran susu ke dalam wajan. Masak sambil terus diaduk hingga saus mengental dan sedikit bergelembung.  Api jangan terlalu besar agar saus tidak gosong.
+3. **Campurkan Ayam:** Potong ayam goreng menjadi beberapa bagian (jika terlalu besar). Masukkan potongan ayam goreng ke dalam saus susu. Aduk rata hingga ayam terbalut saus dengan merata.  Masak selama 2-3 menit agar ayam meresap rasa saus.
+4. **Penyelesaian:** Angkat ayam goreng saus susu dan sajikan hangat. Taburi dengan daun bawang iris (opsional) untuk menambah cita rasa dan penampilan.
+
+
+**Tips:**
+
+* Untuk rasa yang lebih gurih, bisa ditambahkan sedikit kaldu ayam bubuk ke dalam saus.
+* Jika menggunakan susu kental manis, kurangi takarannya dan tambahkan sedikit air agar saus tidak terlalu kental.
+* Sesuaikan kekentalan saus sesuai selera dengan menambahkan sedikit tepung terigu jika dirasa terlalu cair.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"}} 
+[2025-06-07 05:46:44] local.INFO: Chat request received: {"message":"nasi uduk"} 
+[2025-06-07 05:46:47] local.INFO: Chat response received: {"status":200,"body":"{\"response\":\"Selamat siang!  Terima kasih telah bertanya kepada SaveBite.\\n\\nBerikut informasi mengenai nasi uduk:\\n\\n**Ketahanan di suhu ruang:** Nasi uduk sebaiknya dikonsumsi segera setelah dimasak.  Ketahanannya di suhu ruang sangat terbatas, kurang dari 2 jam, terutama di lingkungan yang panas dan lembap.  Setelah lebih dari 2 jam, risiko kontaminasi bakteri meningkat.\\n\\n**Ketahanan di kulkas:**  Nasi uduk dapat disimpan di kulkas selama 2-3 hari.  Namun, kualitas rasa dan teksturnya akan menurun seiring waktu.\\n\\n**Tips penyimpanan:**  Untuk menjaga kesegaran nasi uduk, sebaiknya dinginkan terlebih dahulu sebelum disimpan di dalam wadah kedap udara di kulkas.  Hindari menyimpan nasi uduk dalam suhu ruang dalam jangka waktu lama.  Setelah dihangatkan kembali, pastikan nasi uduk benar-benar panas merata sebelum dikonsumsi.\\n\\nSemoga informasi ini bermanfaat. Jika Anda memiliki pertanyaan lain seputar keamanan pangan, jangan ragu untuk bertanya.\\n\"}"} 
+[2025-06-07 05:48:51] local.INFO: Recipe request: {"ingredients":[{"id":20,"quantity":1},{"id":12,"quantity":1}]} 
+[2025-06-07 05:48:54] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Ayam Goreng Creamy Susu
+
+Resep ini memadukan kelembutan susu dengan gurihnya ayam goreng, menciptakan rasa yang unik dan menggugah selera.
+
+**Bahan:**
+
+* 1 ekor ayam goreng (sudah matang, bisa ayam goreng tepung, ungkep, atau goreng biasa)
+* 100ml susu cair (full cream atau UHT)
+* 1 siung bawang putih, cincang halus
+* 1 sdm tepung maizena
+* 1/2 sdt garam
+* 1/4 sdt merica bubuk
+* 1 sdm minyak goreng
+* Daun bawang, iris (optional)
+
+**Cara Membuat:**
+
+1. **Siapkan Saus:** Dalam sebuah panci kecil, panaskan minyak goreng. Tumis bawang putih hingga harum.
+2. **Masukkan Susu:** Tuang susu cair ke dalam panci. Aduk rata.
+3. **Buat Saus Kental:** Larutkan tepung maizena dengan sedikit air agar tidak menggumpal. Masukkan larutan maizena ke dalam panci berisi susu. Aduk terus hingga saus mengental dan meletup-letup.
+4. **Bumbui:** Tambahkan garam dan merica bubuk. Aduk rata. Koreksi rasa.
+5. **Campurkan Ayam:** Masukkan ayam goreng ke dalam saus. Aduk hingga ayam terbalut saus susu dengan merata.  
+6. **Penyelesaian:** Angkat dan sajikan. Taburi dengan irisan daun bawang jika suka.  Ayam goreng creamy susu siap disantap!
+
+
+**Tips:**
+
+* Anda bisa menambahkan sedikit cabai rawit cincang halus ke dalam saus untuk rasa pedas.
+* Untuk tekstur saus yang lebih kental, tambahkan lebih banyak tepung maizena.
+* Gunakan ayam goreng yang masih hangat untuk hasil terbaik.
+
+
+By Chef SaveBite
+
+"}} 
+[2025-06-07 05:50:17] local.INFO: Login Statistics: {"today":"2025-06-07 00:00:00","todayLogins":14,"weeklyLogins":[0,0,10,8,0,11,14],"sample_log_date":"2025-06-07 12:50:15"} 
+[2025-06-07 05:50:46] local.INFO: Starting permission check {"permission":"manage_categories","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:50:46] local.INFO: Super admin access granted  
+[2025-06-07 05:50:48] local.INFO: Login Statistics: {"today":"2025-06-07 00:00:00","todayLogins":14,"weeklyLogins":[0,0,10,8,0,11,14],"sample_log_date":"2025-06-07 12:50:15"} 
+[2025-06-07 05:50:49] local.INFO: Starting permission check {"permission":"manage_categories","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:50:49] local.INFO: Super admin access granted  
+[2025-06-07 05:50:51] local.INFO: Login Statistics: {"today":"2025-06-07 00:00:00","todayLogins":14,"weeklyLogins":[0,0,10,8,0,11,14],"sample_log_date":"2025-06-07 12:50:15"} 
+[2025-06-07 05:50:57] local.INFO: Starting permission check {"permission":"manage_categories","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:50:57] local.INFO: Super admin access granted  
+[2025-06-07 05:50:58] local.INFO: Login Statistics: {"today":"2025-06-07 00:00:00","todayLogins":14,"weeklyLogins":[0,0,10,8,0,11,14],"sample_log_date":"2025-06-07 12:50:15"} 
+[2025-06-07 05:51:07] local.INFO: Starting permission check {"permission":"view_food","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:51:07] local.INFO: Super admin access granted  
+[2025-06-07 05:51:33] local.INFO: Starting permission check {"permission":"view_users","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:51:33] local.INFO: Super admin access granted  
+[2025-06-07 05:52:00] local.INFO: Starting permission check {"permission":"promote_user_to_role","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:52:00] local.INFO: Super admin access granted  
+[2025-06-07 05:52:02] local.INFO: Starting permission check {"permission":"view_users","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:52:02] local.INFO: Super admin access granted  
+[2025-06-07 05:52:17] local.INFO: Starting permission check {"permission":"view_recipes","user_id":null,"role":"super_admin","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:52:17] local.INFO: Super admin access granted  
+[2025-06-07 05:52:18] local.INFO: Admin Recipes API Response: {"status":200,"body":[{"createdAt":"2025-05-24 00:53:34","createdBy":"testuser3","id":1,"ingredients":[""],"recipe":"## Nasi Goreng Cepat Saji ala Chef SaveBite
+
+Resep ini dirancang untuk 2 porsi, mudah diikuti, dan menghasilkan nasi goreng yang lezat!
+
+**Bahan-bahan:**
+
+* 2 piring nasi putih (sekitar 300 gram), dingin lebih baik
+* 2 butir telur ayam, kocok lepas
+* 5 siung bawang putih, cincang halus
+* 1 buah bawang merah, cincang halus
+* 1 buah cabe merah keriting, buang biji dan cincang halus (sesuaikan selera kepedasan)
+* 100 gram ayam fillet, potong dadu kecil (bisa diganti sosis, bakso, atau seafood)
+* 2 sendok makan kecap manis
+* 1 sendok makan kecap asin
+* 1 sendok teh saus tiram
+* ½ sendok teh garam
+* ¼ sendok teh merica bubuk
+* 2 sendok makan minyak goreng
+* Daun bawang, iris tipis (untuk taburan)
+* Kerupuk (optional)
+
+**Cara Membuat:**
+
+1. Panaskan minyak goreng dalam wajan dengan api sedang.  Masukkan ayam, masak hingga berubah warna dan matang. Angkat dan sisihkan.
+2. Di wajan yang sama, tumis bawang putih dan bawang merah hingga harum (kurang lebih 1 menit).  Masukkan cabe merah, tumis sebentar hingga sedikit layu.
+3. Masukkan nasi putih, aduk rata hingga  berbutir-butir.
+4. Tuang telur kocok ke atas nasi, orak-arik hingga setengah matang.
+5. Tambahkan ayam yang sudah dimasak, kecap manis, kecap asin, saus tiram, garam, dan merica. Aduk rata hingga semua bahan tercampur dan nasi terbaluri bumbu.
+6. Masak hingga nasi hangat dan bumbu meresap (kurang lebih 3 menit).
+7. Angkat dan taburi dengan daun bawang iris.
+8. Sajikan hangat dengan kerupuk sebagai pelengkap.
+
+
+**Tips Chef SaveBite:**
+
+* Untuk nasi goreng yang lebih gurih, bisa ditambahkan sedikit kaldu ayam atau udang.
+* Sesuaikan jumlah cabe sesuai selera kepedasan.
+* Gunakan nasi dingin agar nasi goreng tidak lengket dan mudah diaduk.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"},{"createdAt":"2025-06-04 04:43:13","createdBy":"eton","id":20,"ingredients":["Telur","Oatmeal"],"recipe":"## Oatmeal Telur Panggang (Single Serving)
+
+**Bahan:**
+
+* 1 butir telur
+* 1/2 cangkir oatmeal (bisa pakai yang instan atau yang biasa, sesuaikan tekstur yang diinginkan)
+* Sedikit susu (atau air, sekitar 1-2 sendok makan, opsional, untuk membuat adonan lebih lembut)
+* Secubit garam
+* Perasa opsional (coklat bubuk, kayu manis, madu, buah-buahan kering)
+
+
+**Cara Membuat:**
+
+1. Kocok telur dengan garam hingga sedikit berbusa.
+2. Masukkan oatmeal ke dalam mangkuk.  Tuang telur kocok ke atas oatmeal.  Jika menggunakan, tambahkan susu/air dan perasa pilihan. Aduk rata hingga tercampur. Biarkan adonan selama beberapa menit agar oatmeal menyerap cairan.
+3. Panaskan sedikit minyak atau margarin dalam wajan anti lengket dengan api kecil.
+4. Tuang adonan oatmeal telur ke dalam wajan. Ratakan sedikit.
+5. Masak dengan api kecil hingga bagian bawah kecokelatan dan bagian atas matang (sekitar 3-5 menit).  Anda bisa menutup wajan agar bagian atas matang sempurna.  Waktu memasak bisa disesuaikan dengan ketebalan adonan dan selera kematangan.
+6. Balikkan perlahan jika ingin kedua sisi kecokelatan.  Namun, ini opsional.
+7. Sajikan hangat.
+
+
+**Tips:**
+
+* Untuk tekstur yang lebih lembut, gunakan oatmeal instan dan tambahkan sedikit susu.
+* Untuk tekstur yang lebih padat, gunakan oatmeal biasa dan kurangi atau hilangkan susu.
+* Tambahkan buah-buahan kering seperti kismis atau cranberry untuk menambah rasa dan nutrisi.
+* Bisa ditambahkan sedikit madu atau sirup maple setelah matang untuk menambah rasa manis.
+
+
+Selamat menikmati sarapan sehat dan lezat!
+
+by Chef SaveBite
+
+"},{"createdAt":"2025-06-04 04:43:28","createdBy":"eton","id":21,"ingredients":["Oatmeal"],"recipe":"## Oatmeal Panggang Madu Apel (1 porsi)
+
+**Bahan:**
+
+* 1 cangkir Oatmeal (bisa pakai jenis instan atau yang perlu dimasak)
+* 1/2 buah apel, kupas, buang bijinya, dan potong dadu kecil
+* 1 sendok makan madu
+* 1/4 sendok teh kayu manis bubuk
+* Sejumput garam
+* 1/4 cangkir susu (susu sapi, almond, atau oat)
+* (Opsional) 1 sendok makan kismis atau kacang-kacangan cincang
+
+
+**Cara Membuat:**
+
+1. Panaskan oven hingga 180°C (350°F).
+2. Dalam mangkuk tahan panas, campur oatmeal, apel, madu, kayu manis, dan garam.
+3. Tuang susu ke dalam campuran oatmeal. Aduk rata hingga semua bahan tercampur dan oatmeal terendam rata.
+4. (Opsional) Taburi dengan kismis atau kacang-kacangan cincang.
+5. Panggang selama 15-20 menit, atau sampai oatmeal matang dan sedikit kecokelatan di bagian atas.  Waktu memanggang bisa bervariasi tergantung jenis oven dan jenis oatmeal yang digunakan. Pastikan untuk mengecek kematangannya.
+6. Angkat dari oven dan biarkan sedikit dingin sebelum disajikan.  Nikmati hangat!
+
+
+**Tips:**
+
+* Untuk oatmeal yang lebih lembap, tambahkan sedikit susu lagi.
+* Anda bisa menambahkan buah-buahan lain seperti pisang atau beri sesuai selera.
+* Untuk rasa yang lebih gurih, ganti madu dengan sedikit maple syrup dan tambahkan sejumput pala.
+
+
+By Chef SaveBite
+
+"},{"createdAt":"2025-06-04 04:56:07","createdBy":"eton","id":22,"ingredients":["Telur"],"recipe":"Berikut beberapa resep yang bisa dibuat dari 5 butir telur, dengan variasi tingkat kesulitan:
+
+**Resep 1: Omelette Sederhana (Mudah)**
+
+* **Bahan:** 5 butir telur, garam, merica, sedikit minyak goreng, isian sesuai selera (sayuran cincang, keju, daging).
+* **Cara Membuat:**
+    1. Kocok telur bersama garam dan merica hingga berbusa.
+    2. Panaskan sedikit minyak goreng dalam wajan anti lengket.
+    3. Tuang adonan telur ke wajan, masak hingga bagian bawah agak mengeras.
+    4. Taburkan isian pilihan di setengah bagian omelette.
+    5. Lipat omelette menjadi dua.
+    6. Masak hingga matang sempurna. Sajikan hangat.
+
+
+**Resep 2: Dadar Gulung Isi (Sedang)**
+
+* **Bahan:** 5 butir telur, garam, sedikit minyak goreng, isian sesuai selera (suwir ayam, wortel, daun bawang).
+* **Cara Membuat:**
+    1. Kocok telur bersama garam hingga rata.
+    2. Panaskan sedikit minyak goreng dalam wajan tipis, anti lengket.
+    3. Tuang sedikit adonan telur, ratakan hingga membentuk lapisan tipis.
+    4. Masak hingga setengah matang, lalu angkat dan gulung.
+    5. Ulangi hingga semua adonan habis.
+    6. Tambahkan isian di tengah gulungan dadar.  Gulung kembali.
+    7. Potong dadar gulung sesuai selera. Sajikan hangat.
+
+
+**Resep 3:  Frittata Sayuran (Sedang)**
+
+* **Bahan:** 5 butir telur, garam, merica, 1/2 bawang bombay cincang, 1/2 paprika merah cincang, 1/4 cangkir jamur cincang, 1/4 cangkir keju parut, sedikit minyak zaitun.
+* **Cara Membuat:**
+    1. Panaskan minyak zaitun dalam oven-safe skillet atau panci tahan panas.
+    2. Tumis bawang bombay hingga harum, lalu tambahkan paprika dan jamur. Tumis hingga layu.
+    3. Kocok telur bersama garam dan merica.
+    4. Tuang telur ke dalam panci, aduk rata dengan sayuran.
+    5. Taburkan keju parut di atasnya.
+    6. Panggang dalam oven yang sudah dipanaskan hingga 175°C selama 20-25 menit atau hingga frittata matang dan set.
+
+
+**Resep 4: Kue Kering Telur (Sulit)**
+
+* **Bahan:**  5 butir telur (pisahkan kuning dan putihnya), 100 gr gula pasir, 100 gr tepung terigu, sedikit garam, vanili.
+* **Cara Membuat:**  (Resep kue kering ini membutuhkan langkah yang lebih detail dan sebaiknya dicari resep spesifik di internet karena membutuhkan teknik pengocokan putih telur yang benar untuk mendapatkan tekstur yang baik)
+
+
+Pilih resep yang sesuai dengan kemampuan dan selera Anda.
+
+by Chef SaveBite
+
+"},{"createdAt":"2025-06-04 04:56:26","createdBy":"eton","id":23,"ingredients":["Telur","Oatmeal"],"recipe":"## Oatmeal Telur Panggang (Savory)
+
+**Bahan:**
+
+* 1 cangkir oatmeal instan (bisa pakai rasa apapun, atau tanpa rasa)
+* 1 butir telur
+* Sedikit air atau susu (sesuaikan kekentalan)
+* Garam dan merica secukupnya
+* Opsional:  Sayuran cincang halus (bayam, jamur, paprika), keju parut, bawang putih cincang
+
+**Cara Membuat:**
+
+1. Campur oatmeal dengan air atau susu hingga mencapai kekentalan yang diinginkan.  Jangan terlalu encer,  sedikit lebih kental lebih baik.
+2. Kocok telur dalam mangkuk terpisah, tambahkan garam dan merica.
+3. Campur telur kocok ke dalam adonan oatmeal. Aduk rata.
+4. (Opsional) Tambahkan sayuran cincang, keju parut, atau bawang putih cincang ke dalam adonan. Aduk rata.
+5. Panaskan sedikit minyak atau margarin di wajan anti lengket dengan api sedang.
+6. Tuang adonan oatmeal ke dalam wajan, ratakan.
+7. Masak selama 3-5 menit per sisi, atau hingga bagian bawah kecoklatan dan oatmeal matang.  Bisa ditutup dengan tutup wajan agar matang merata.
+8. Angkat dan sajikan hangat.
+
+
+**Tips:**
+
+* Untuk tekstur yang lebih lembut, gunakan oatmeal yang halus.
+* Untuk rasa yang lebih gurih, tambahkan sedikit kecap asin atau saus tiram.
+* Sajikan dengan saus sambal, saus tomat, atau mayones untuk menambah cita rasa.
+
+
+By Chef SaveBite
+
+"},{"createdAt":"2025-06-04 04:57:11","createdBy":"eton","id":24,"ingredients":[""],"recipe":"Maaf, saya tidak bisa membuat resep dari bahan \"1x Sate Kucing\".  Sate kucing bukanlah makanan yang pantas dikonsumsi dan pembuatannya tidak etis.  Hewan peliharaan harus dirawat dan dilindungi, bukan dijadikan bahan makanan.  Saya hanya bisa membuat resep dari bahan-bahan yang aman dan etis untuk dikonsumsi manusia.
+
+Jika Anda ingin resep lain, silakan berikan bahan-bahan yang aman dan sesuai untuk dikonsumsi.
+
+
+By Chef SaveBite
+
+"},{"createdAt":"2025-06-04 05:22:31","createdBy":"eton","id":25,"ingredients":["Telur","Oatmeal"],"recipe":"## Oatmeal Pancake Telur (untuk 1 porsi)
+
+**Bahan:**
+
+* 1 cangkir Oatmeal (bisa instan atau yang perlu dimasak, sesuaikan takaran air sesuai petunjuk kemasan jika perlu)
+* 1 butir Telur
+
+**Cara Membuat:**
+
+1. Jika menggunakan oatmeal instan, cukup campurkan oatmeal dengan air sesuai petunjuk kemasan.  Biarkan hingga agak lunak, sekitar 5 menit. Jika menggunakan oatmeal yang perlu dimasak, masak sesuai petunjuk kemasan hingga matang namun masih sedikit lembap.
+2. Kocok telur dalam mangkuk kecil hingga berbusa.
+3. Campurkan telur kocok dengan oatmeal yang telah lunak/matang. Aduk rata hingga tercampur sempurna.  Jika adonan terlalu kering, bisa ditambahkan sedikit air atau susu (jika ada).
+4. Panaskan sedikit minyak atau margarin di atas teflon dengan api sedang.
+5. Tuang adonan oatmeal ke atas teflon, bentuk sesuai selera (bisa bulat seperti pancake biasa atau bentuk lainnya).
+6. Masak selama 2-3 menit per sisi, atau hingga kedua sisi berwarna kecokelatan dan matang.
+7. Angkat dan sajikan hangat.  Bisa ditambahkan topping sesuai selera, seperti madu, sirup maple, buah-buahan, atau kacang-kacangan.
+
+**Tips:**
+
+* Untuk tekstur yang lebih lembut, haluskan oatmeal terlebih dahulu sebelum dicampur dengan telur.
+* Jika ingin pancake yang lebih tebal, gunakan lebih banyak adonan untuk setiap pancake.
+* Sesuaikan waktu memasak sesuai dengan ketebalan pancake dan panas api.
+
+**By Chef SaveBite**
+
+"},{"createdAt":"2025-06-07 04:11:01","createdBy":"mahhbroo","id":34,"ingredients":["susu","ayam goreng"],"recipe":"## Ayam Goreng Saus Susu Creamy
+
+**Bahan-bahan:**
+
+* 1 ekor ayam goreng (bisa pakai ayam goreng siap saji atau ayam goreng hasil masakan sendiri)
+* 1 gelas susu cair (bisa susu sapi, susu UHT, atau susu kental manis, sesuai selera)
+* 1 sdm tepung terigu
+* 1 sdt bawang putih bubuk
+* ½ sdt garam
+* ¼ sdt merica bubuk
+* 1 sdm margarin/mentega
+* Daun bawang iris (optional, untuk taburan)
+
+**Cara Membuat:**
+
+1. **Siapkan Saus:** Dalam mangkuk kecil, campur susu cair, tepung terigu, bawang putih bubuk, garam, dan merica bubuk. Aduk rata hingga tidak ada gumpalan.
+2. **Masak Saus:** Panaskan margarin/mentega dalam wajan di atas api sedang. Tuang campuran susu ke dalam wajan. Masak sambil terus diaduk hingga saus mengental dan sedikit bergelembung.  Api jangan terlalu besar agar saus tidak gosong.
+3. **Campurkan Ayam:** Potong ayam goreng menjadi beberapa bagian (jika terlalu besar). Masukkan potongan ayam goreng ke dalam saus susu. Aduk rata hingga ayam terbalut saus dengan merata.  Masak selama 2-3 menit agar ayam meresap rasa saus.
+4. **Penyelesaian:** Angkat ayam goreng saus susu dan sajikan hangat. Taburi dengan daun bawang iris (opsional) untuk menambah cita rasa dan penampilan.
+
+
+**Tips:**
+
+* Untuk rasa yang lebih gurih, bisa ditambahkan sedikit kaldu ayam bubuk ke dalam saus.
+* Jika menggunakan susu kental manis, kurangi takarannya dan tambahkan sedikit air agar saus tidak terlalu kental.
+* Sesuaikan kekentalan saus sesuai selera dengan menambahkan sedikit tepung terigu jika dirasa terlalu cair.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"},{"createdAt":"2025-06-07 05:48:54","createdBy":"mahhbroo","id":35,"ingredients":["susu","ayam goreng"],"recipe":"## Ayam Goreng Creamy Susu
+
+Resep ini memadukan kelembutan susu dengan gurihnya ayam goreng, menciptakan rasa yang unik dan menggugah selera.
+
+**Bahan:**
+
+* 1 ekor ayam goreng (sudah matang, bisa ayam goreng tepung, ungkep, atau goreng biasa)
+* 100ml susu cair (full cream atau UHT)
+* 1 siung bawang putih, cincang halus
+* 1 sdm tepung maizena
+* 1/2 sdt garam
+* 1/4 sdt merica bubuk
+* 1 sdm minyak goreng
+* Daun bawang, iris (optional)
+
+**Cara Membuat:**
+
+1. **Siapkan Saus:** Dalam sebuah panci kecil, panaskan minyak goreng. Tumis bawang putih hingga harum.
+2. **Masukkan Susu:** Tuang susu cair ke dalam panci. Aduk rata.
+3. **Buat Saus Kental:** Larutkan tepung maizena dengan sedikit air agar tidak menggumpal. Masukkan larutan maizena ke dalam panci berisi susu. Aduk terus hingga saus mengental dan meletup-letup.
+4. **Bumbui:** Tambahkan garam dan merica bubuk. Aduk rata. Koreksi rasa.
+5. **Campurkan Ayam:** Masukkan ayam goreng ke dalam saus. Aduk hingga ayam terbalut saus susu dengan merata.  
+6. **Penyelesaian:** Angkat dan sajikan. Taburi dengan irisan daun bawang jika suka.  Ayam goreng creamy susu siap disantap!
+
+
+**Tips:**
+
+* Anda bisa menambahkan sedikit cabai rawit cincang halus ke dalam saus untuk rasa pedas.
+* Untuk tekstur saus yang lebih kental, tambahkan lebih banyak tepung maizena.
+* Gunakan ayam goreng yang masih hangat untuk hasil terbaik.
+
+
+By Chef SaveBite
+
+"}]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-05-24 00:53:34","createdBy":"testuser3","id":1,"ingredients":[""],"recipe":"## Nasi Goreng Cepat Saji ala Chef SaveBite
+
+Resep ini dirancang untuk 2 porsi, mudah diikuti, dan menghasilkan nasi goreng yang lezat!
+
+**Bahan-bahan:**
+
+* 2 piring nasi putih (sekitar 300 gram), dingin lebih baik
+* 2 butir telur ayam, kocok lepas
+* 5 siung bawang putih, cincang halus
+* 1 buah bawang merah, cincang halus
+* 1 buah cabe merah keriting, buang biji dan cincang halus (sesuaikan selera kepedasan)
+* 100 gram ayam fillet, potong dadu kecil (bisa diganti sosis, bakso, atau seafood)
+* 2 sendok makan kecap manis
+* 1 sendok makan kecap asin
+* 1 sendok teh saus tiram
+* ½ sendok teh garam
+* ¼ sendok teh merica bubuk
+* 2 sendok makan minyak goreng
+* Daun bawang, iris tipis (untuk taburan)
+* Kerupuk (optional)
+
+**Cara Membuat:**
+
+1. Panaskan minyak goreng dalam wajan dengan api sedang.  Masukkan ayam, masak hingga berubah warna dan matang. Angkat dan sisihkan.
+2. Di wajan yang sama, tumis bawang putih dan bawang merah hingga harum (kurang lebih 1 menit).  Masukkan cabe merah, tumis sebentar hingga sedikit layu.
+3. Masukkan nasi putih, aduk rata hingga  berbutir-butir.
+4. Tuang telur kocok ke atas nasi, orak-arik hingga setengah matang.
+5. Tambahkan ayam yang sudah dimasak, kecap manis, kecap asin, saus tiram, garam, dan merica. Aduk rata hingga semua bahan tercampur dan nasi terbaluri bumbu.
+6. Masak hingga nasi hangat dan bumbu meresap (kurang lebih 3 menit).
+7. Angkat dan taburi dengan daun bawang iris.
+8. Sajikan hangat dengan kerupuk sebagai pelengkap.
+
+
+**Tips Chef SaveBite:**
+
+* Untuk nasi goreng yang lebih gurih, bisa ditambahkan sedikit kaldu ayam atau udang.
+* Sesuaikan jumlah cabe sesuai selera kepedasan.
+* Gunakan nasi dingin agar nasi goreng tidak lengket dan mudah diaduk.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-04 04:43:13","createdBy":"eton","id":20,"ingredients":["Telur","Oatmeal"],"recipe":"## Oatmeal Telur Panggang (Single Serving)
+
+**Bahan:**
+
+* 1 butir telur
+* 1/2 cangkir oatmeal (bisa pakai yang instan atau yang biasa, sesuaikan tekstur yang diinginkan)
+* Sedikit susu (atau air, sekitar 1-2 sendok makan, opsional, untuk membuat adonan lebih lembut)
+* Secubit garam
+* Perasa opsional (coklat bubuk, kayu manis, madu, buah-buahan kering)
+
+
+**Cara Membuat:**
+
+1. Kocok telur dengan garam hingga sedikit berbusa.
+2. Masukkan oatmeal ke dalam mangkuk.  Tuang telur kocok ke atas oatmeal.  Jika menggunakan, tambahkan susu/air dan perasa pilihan. Aduk rata hingga tercampur. Biarkan adonan selama beberapa menit agar oatmeal menyerap cairan.
+3. Panaskan sedikit minyak atau margarin dalam wajan anti lengket dengan api kecil.
+4. Tuang adonan oatmeal telur ke dalam wajan. Ratakan sedikit.
+5. Masak dengan api kecil hingga bagian bawah kecokelatan dan bagian atas matang (sekitar 3-5 menit).  Anda bisa menutup wajan agar bagian atas matang sempurna.  Waktu memasak bisa disesuaikan dengan ketebalan adonan dan selera kematangan.
+6. Balikkan perlahan jika ingin kedua sisi kecokelatan.  Namun, ini opsional.
+7. Sajikan hangat.
+
+
+**Tips:**
+
+* Untuk tekstur yang lebih lembut, gunakan oatmeal instan dan tambahkan sedikit susu.
+* Untuk tekstur yang lebih padat, gunakan oatmeal biasa dan kurangi atau hilangkan susu.
+* Tambahkan buah-buahan kering seperti kismis atau cranberry untuk menambah rasa dan nutrisi.
+* Bisa ditambahkan sedikit madu atau sirup maple setelah matang untuk menambah rasa manis.
+
+
+Selamat menikmati sarapan sehat dan lezat!
+
+by Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-04 04:43:28","createdBy":"eton","id":21,"ingredients":["Oatmeal"],"recipe":"## Oatmeal Panggang Madu Apel (1 porsi)
+
+**Bahan:**
+
+* 1 cangkir Oatmeal (bisa pakai jenis instan atau yang perlu dimasak)
+* 1/2 buah apel, kupas, buang bijinya, dan potong dadu kecil
+* 1 sendok makan madu
+* 1/4 sendok teh kayu manis bubuk
+* Sejumput garam
+* 1/4 cangkir susu (susu sapi, almond, atau oat)
+* (Opsional) 1 sendok makan kismis atau kacang-kacangan cincang
+
+
+**Cara Membuat:**
+
+1. Panaskan oven hingga 180°C (350°F).
+2. Dalam mangkuk tahan panas, campur oatmeal, apel, madu, kayu manis, dan garam.
+3. Tuang susu ke dalam campuran oatmeal. Aduk rata hingga semua bahan tercampur dan oatmeal terendam rata.
+4. (Opsional) Taburi dengan kismis atau kacang-kacangan cincang.
+5. Panggang selama 15-20 menit, atau sampai oatmeal matang dan sedikit kecokelatan di bagian atas.  Waktu memanggang bisa bervariasi tergantung jenis oven dan jenis oatmeal yang digunakan. Pastikan untuk mengecek kematangannya.
+6. Angkat dari oven dan biarkan sedikit dingin sebelum disajikan.  Nikmati hangat!
+
+
+**Tips:**
+
+* Untuk oatmeal yang lebih lembap, tambahkan sedikit susu lagi.
+* Anda bisa menambahkan buah-buahan lain seperti pisang atau beri sesuai selera.
+* Untuk rasa yang lebih gurih, ganti madu dengan sedikit maple syrup dan tambahkan sejumput pala.
+
+
+By Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-04 04:56:07","createdBy":"eton","id":22,"ingredients":["Telur"],"recipe":"Berikut beberapa resep yang bisa dibuat dari 5 butir telur, dengan variasi tingkat kesulitan:
+
+**Resep 1: Omelette Sederhana (Mudah)**
+
+* **Bahan:** 5 butir telur, garam, merica, sedikit minyak goreng, isian sesuai selera (sayuran cincang, keju, daging).
+* **Cara Membuat:**
+    1. Kocok telur bersama garam dan merica hingga berbusa.
+    2. Panaskan sedikit minyak goreng dalam wajan anti lengket.
+    3. Tuang adonan telur ke wajan, masak hingga bagian bawah agak mengeras.
+    4. Taburkan isian pilihan di setengah bagian omelette.
+    5. Lipat omelette menjadi dua.
+    6. Masak hingga matang sempurna. Sajikan hangat.
+
+
+**Resep 2: Dadar Gulung Isi (Sedang)**
+
+* **Bahan:** 5 butir telur, garam, sedikit minyak goreng, isian sesuai selera (suwir ayam, wortel, daun bawang).
+* **Cara Membuat:**
+    1. Kocok telur bersama garam hingga rata.
+    2. Panaskan sedikit minyak goreng dalam wajan tipis, anti lengket.
+    3. Tuang sedikit adonan telur, ratakan hingga membentuk lapisan tipis.
+    4. Masak hingga setengah matang, lalu angkat dan gulung.
+    5. Ulangi hingga semua adonan habis.
+    6. Tambahkan isian di tengah gulungan dadar.  Gulung kembali.
+    7. Potong dadar gulung sesuai selera. Sajikan hangat.
+
+
+**Resep 3:  Frittata Sayuran (Sedang)**
+
+* **Bahan:** 5 butir telur, garam, merica, 1/2 bawang bombay cincang, 1/2 paprika merah cincang, 1/4 cangkir jamur cincang, 1/4 cangkir keju parut, sedikit minyak zaitun.
+* **Cara Membuat:**
+    1. Panaskan minyak zaitun dalam oven-safe skillet atau panci tahan panas.
+    2. Tumis bawang bombay hingga harum, lalu tambahkan paprika dan jamur. Tumis hingga layu.
+    3. Kocok telur bersama garam dan merica.
+    4. Tuang telur ke dalam panci, aduk rata dengan sayuran.
+    5. Taburkan keju parut di atasnya.
+    6. Panggang dalam oven yang sudah dipanaskan hingga 175°C selama 20-25 menit atau hingga frittata matang dan set.
+
+
+**Resep 4: Kue Kering Telur (Sulit)**
+
+* **Bahan:**  5 butir telur (pisahkan kuning dan putihnya), 100 gr gula pasir, 100 gr tepung terigu, sedikit garam, vanili.
+* **Cara Membuat:**  (Resep kue kering ini membutuhkan langkah yang lebih detail dan sebaiknya dicari resep spesifik di internet karena membutuhkan teknik pengocokan putih telur yang benar untuk mendapatkan tekstur yang baik)
+
+
+Pilih resep yang sesuai dengan kemampuan dan selera Anda.
+
+by Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-04 04:56:26","createdBy":"eton","id":23,"ingredients":["Telur","Oatmeal"],"recipe":"## Oatmeal Telur Panggang (Savory)
+
+**Bahan:**
+
+* 1 cangkir oatmeal instan (bisa pakai rasa apapun, atau tanpa rasa)
+* 1 butir telur
+* Sedikit air atau susu (sesuaikan kekentalan)
+* Garam dan merica secukupnya
+* Opsional:  Sayuran cincang halus (bayam, jamur, paprika), keju parut, bawang putih cincang
+
+**Cara Membuat:**
+
+1. Campur oatmeal dengan air atau susu hingga mencapai kekentalan yang diinginkan.  Jangan terlalu encer,  sedikit lebih kental lebih baik.
+2. Kocok telur dalam mangkuk terpisah, tambahkan garam dan merica.
+3. Campur telur kocok ke dalam adonan oatmeal. Aduk rata.
+4. (Opsional) Tambahkan sayuran cincang, keju parut, atau bawang putih cincang ke dalam adonan. Aduk rata.
+5. Panaskan sedikit minyak atau margarin di wajan anti lengket dengan api sedang.
+6. Tuang adonan oatmeal ke dalam wajan, ratakan.
+7. Masak selama 3-5 menit per sisi, atau hingga bagian bawah kecoklatan dan oatmeal matang.  Bisa ditutup dengan tutup wajan agar matang merata.
+8. Angkat dan sajikan hangat.
+
+
+**Tips:**
+
+* Untuk tekstur yang lebih lembut, gunakan oatmeal yang halus.
+* Untuk rasa yang lebih gurih, tambahkan sedikit kecap asin atau saus tiram.
+* Sajikan dengan saus sambal, saus tomat, atau mayones untuk menambah cita rasa.
+
+
+By Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-04 04:57:11","createdBy":"eton","id":24,"ingredients":[""],"recipe":"Maaf, saya tidak bisa membuat resep dari bahan \"1x Sate Kucing\".  Sate kucing bukanlah makanan yang pantas dikonsumsi dan pembuatannya tidak etis.  Hewan peliharaan harus dirawat dan dilindungi, bukan dijadikan bahan makanan.  Saya hanya bisa membuat resep dari bahan-bahan yang aman dan etis untuk dikonsumsi manusia.
+
+Jika Anda ingin resep lain, silakan berikan bahan-bahan yang aman dan sesuai untuk dikonsumsi.
+
+
+By Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-04 05:22:31","createdBy":"eton","id":25,"ingredients":["Telur","Oatmeal"],"recipe":"## Oatmeal Pancake Telur (untuk 1 porsi)
+
+**Bahan:**
+
+* 1 cangkir Oatmeal (bisa instan atau yang perlu dimasak, sesuaikan takaran air sesuai petunjuk kemasan jika perlu)
+* 1 butir Telur
+
+**Cara Membuat:**
+
+1. Jika menggunakan oatmeal instan, cukup campurkan oatmeal dengan air sesuai petunjuk kemasan.  Biarkan hingga agak lunak, sekitar 5 menit. Jika menggunakan oatmeal yang perlu dimasak, masak sesuai petunjuk kemasan hingga matang namun masih sedikit lembap.
+2. Kocok telur dalam mangkuk kecil hingga berbusa.
+3. Campurkan telur kocok dengan oatmeal yang telah lunak/matang. Aduk rata hingga tercampur sempurna.  Jika adonan terlalu kering, bisa ditambahkan sedikit air atau susu (jika ada).
+4. Panaskan sedikit minyak atau margarin di atas teflon dengan api sedang.
+5. Tuang adonan oatmeal ke atas teflon, bentuk sesuai selera (bisa bulat seperti pancake biasa atau bentuk lainnya).
+6. Masak selama 2-3 menit per sisi, atau hingga kedua sisi berwarna kecokelatan dan matang.
+7. Angkat dan sajikan hangat.  Bisa ditambahkan topping sesuai selera, seperti madu, sirup maple, buah-buahan, atau kacang-kacangan.
+
+**Tips:**
+
+* Untuk tekstur yang lebih lembut, haluskan oatmeal terlebih dahulu sebelum dicampur dengan telur.
+* Jika ingin pancake yang lebih tebal, gunakan lebih banyak adonan untuk setiap pancake.
+* Sesuaikan waktu memasak sesuai dengan ketebalan pancake dan panas api.
+
+**By Chef SaveBite**
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-07 04:11:01","createdBy":"mahhbroo","id":34,"ingredients":["susu","ayam goreng"],"recipe":"## Ayam Goreng Saus Susu Creamy
+
+**Bahan-bahan:**
+
+* 1 ekor ayam goreng (bisa pakai ayam goreng siap saji atau ayam goreng hasil masakan sendiri)
+* 1 gelas susu cair (bisa susu sapi, susu UHT, atau susu kental manis, sesuai selera)
+* 1 sdm tepung terigu
+* 1 sdt bawang putih bubuk
+* ½ sdt garam
+* ¼ sdt merica bubuk
+* 1 sdm margarin/mentega
+* Daun bawang iris (optional, untuk taburan)
+
+**Cara Membuat:**
+
+1. **Siapkan Saus:** Dalam mangkuk kecil, campur susu cair, tepung terigu, bawang putih bubuk, garam, dan merica bubuk. Aduk rata hingga tidak ada gumpalan.
+2. **Masak Saus:** Panaskan margarin/mentega dalam wajan di atas api sedang. Tuang campuran susu ke dalam wajan. Masak sambil terus diaduk hingga saus mengental dan sedikit bergelembung.  Api jangan terlalu besar agar saus tidak gosong.
+3. **Campurkan Ayam:** Potong ayam goreng menjadi beberapa bagian (jika terlalu besar). Masukkan potongan ayam goreng ke dalam saus susu. Aduk rata hingga ayam terbalut saus dengan merata.  Masak selama 2-3 menit agar ayam meresap rasa saus.
+4. **Penyelesaian:** Angkat ayam goreng saus susu dan sajikan hangat. Taburi dengan daun bawang iris (opsional) untuk menambah cita rasa dan penampilan.
+
+
+**Tips:**
+
+* Untuk rasa yang lebih gurih, bisa ditambahkan sedikit kaldu ayam bubuk ke dalam saus.
+* Jika menggunakan susu kental manis, kurangi takarannya dan tambahkan sedikit air agar saus tidak terlalu kental.
+* Sesuaikan kekentalan saus sesuai selera dengan menambahkan sedikit tepung terigu jika dirasa terlalu cair.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Recipe Data: {"recipe":{"createdAt":"2025-06-07 05:48:54","createdBy":"mahhbroo","id":35,"ingredients":["susu","ayam goreng"],"recipe":"## Ayam Goreng Creamy Susu
+
+Resep ini memadukan kelembutan susu dengan gurihnya ayam goreng, menciptakan rasa yang unik dan menggugah selera.
+
+**Bahan:**
+
+* 1 ekor ayam goreng (sudah matang, bisa ayam goreng tepung, ungkep, atau goreng biasa)
+* 100ml susu cair (full cream atau UHT)
+* 1 siung bawang putih, cincang halus
+* 1 sdm tepung maizena
+* 1/2 sdt garam
+* 1/4 sdt merica bubuk
+* 1 sdm minyak goreng
+* Daun bawang, iris (optional)
+
+**Cara Membuat:**
+
+1. **Siapkan Saus:** Dalam sebuah panci kecil, panaskan minyak goreng. Tumis bawang putih hingga harum.
+2. **Masukkan Susu:** Tuang susu cair ke dalam panci. Aduk rata.
+3. **Buat Saus Kental:** Larutkan tepung maizena dengan sedikit air agar tidak menggumpal. Masukkan larutan maizena ke dalam panci berisi susu. Aduk terus hingga saus mengental dan meletup-letup.
+4. **Bumbui:** Tambahkan garam dan merica bubuk. Aduk rata. Koreksi rasa.
+5. **Campurkan Ayam:** Masukkan ayam goreng ke dalam saus. Aduk hingga ayam terbalut saus susu dengan merata.  
+6. **Penyelesaian:** Angkat dan sajikan. Taburi dengan irisan daun bawang jika suka.  Ayam goreng creamy susu siap disantap!
+
+
+**Tips:**
+
+* Anda bisa menambahkan sedikit cabai rawit cincang halus ke dalam saus untuk rasa pedas.
+* Untuk tekstur saus yang lebih kental, tambahkan lebih banyak tepung maizena.
+* Gunakan ayam goreng yang masih hangat untuk hasil terbaik.
+
+
+By Chef SaveBite
+
+"},"available_fields":["createdAt","createdBy","id","ingredients","recipe"]} 
+[2025-06-07 05:52:18] local.INFO: Final Recipes Data: {"first_recipe":{"id":1,"name":"Tidak ada nama","ingredients":[""],"creator":"testuser3","created_at":"2025-05-24 00:53:34"},"total_recipes":9} 
+[2025-06-07 05:56:20] local.INFO: Starting permission check {"permission":"view_food","user_id":null,"role":"admin_inventori","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:56:20] local.DEBUG: Making API request {"url":"http://localhost:8080/check-permission","token_length":157,"permission":"view_food"} 
+[2025-06-07 05:56:22] local.ERROR: Exception during permission check: {"error":"cURL error 7: Failed to connect to localhost port 8080 after 2256 ms: Couldn't connect to server (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://localhost:8080/check-permission?permission=view_food","trace":"#0 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#1 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#2 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(771): Illuminate\\Http\\Client\\PendingRequest->send('GET', 'http://localhos...', Array)
+#3 D:\\tugas Binus\\savebite\\app\\Http\\Middleware\\CheckPermission.php(74): Illuminate\\Http\\Client\\PendingRequest->get('http://localhos...', Array)
+#4 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): App\\Http\\Middleware\\CheckPermission->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'view_food')
+#5 D:\\tugas Binus\\savebite\\app\\Http\\Middleware\\AdminAuth.php(46): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#15 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#49 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#51 {main}","permission":"view_food","user_id":null,"role":"admin_inventori","api_url":"http://localhost:8080","full_url":"http://localhost:8080/check-permission"} 
+[2025-06-07 05:56:37] local.INFO: Starting permission check {"permission":"view_food","user_id":null,"role":"admin_inventori","token_exists":true,"api_url":"http://localhost:8080"} 
+[2025-06-07 05:56:37] local.DEBUG: Making API request {"url":"http://localhost:8080/check-permission","token_length":157,"permission":"view_food"} 
+[2025-06-07 05:56:40] local.ERROR: Exception during permission check: {"error":"cURL error 7: Failed to connect to localhost port 8080 after 2241 ms: Couldn't connect to server (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://localhost:8080/check-permission?permission=view_food","trace":"#0 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(338): Illuminate\\Http\\Client\\PendingRequest->Illuminate\\Http\\Client\\{closure}(1)
+#1 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(904): retry(0, Object(Closure), 100, Object(Closure))
+#2 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Client\\PendingRequest.php(771): Illuminate\\Http\\Client\\PendingRequest->send('GET', 'http://localhos...', Array)
+#3 D:\\tugas Binus\\savebite\\app\\Http\\Middleware\\CheckPermission.php(74): Illuminate\\Http\\Client\\PendingRequest->get('http://localhos...', Array)
+#4 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): App\\Http\\Middleware\\CheckPermission->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'view_food')
+#5 D:\\tugas Binus\\savebite\\app\\Http\\Middleware\\AdminAuth.php(46): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#7 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#15 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#22 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#23 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#24 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#25 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#26 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#47 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#48 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#49 D:\\tugas Binus\\savebite\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#50 D:\\tugas Binus\\savebite\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\tugas Binus\\\\...')
+#51 {main}","permission":"view_food","user_id":null,"role":"admin_inventori","api_url":"http://localhost:8080","full_url":"http://localhost:8080/check-permission"} 
+[2025-06-08 10:13:37] local.INFO: Recipe request: {"ingredients":[{"id":28,"quantity":1},{"id":29,"quantity":1},{"id":30,"quantity":1},{"id":31,"quantity":1}]} 
+[2025-06-08 10:13:41] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"Berikut resep Brownies Kukus sederhana dengan bahan-bahan yang Anda sebutkan.  Karena hanya ada sedikit bahan, hasilnya akan menjadi brownies yang sederhana, mungkin sedikit lebih padat daripada brownies panggang biasa.  Anda bisa menambahkan bahan lain seperti telur, gula, dan minyak untuk hasil yang lebih optimal.  Resep ini mengasumsikan \"coklat\" mengacu pada coklat batangan yang perlu dilelehkan.
+
+**Brownies Kukus Sederhana (versi minimalis)**
+
+**Bahan:**
+
+* 100 gram coklat batangan (dark, milk, atau sesuai selera), dilelehkan
+* 100 gram tepung terigu protein sedang
+* 1 sendok teh ragi instan (bisa diganti dengan baking powder, tapi hasilnya akan sedikit berbeda)
+* 2 sendok makan susu bubuk
+
+
+**Cara Membuat:**
+
+1. Lelehkan coklat batangan hingga benar-benar cair.  Biarkan sedikit dingin.
+2. Dalam wadah terpisah, campur tepung terigu dan ragi instan. Aduk rata.
+3. Masukkan susu bubuk ke dalam campuran tepung. Aduk rata.
+4. Tuang coklat leleh ke dalam campuran tepung secara perlahan sambil diaduk hingga tercampur rata dan menjadi adonan yang kental.  Jangan overmix.
+5. Siapkan loyang ukuran 20x20 cm yang telah diolesi sedikit minyak atau dialasi kertas roti.
+6. Tuang adonan ke dalam loyang. Ratakan permukaannya.
+7. Kukus selama kurang lebih 20-25 menit dengan api sedang.  Pastikan kukusan sudah panas sebelumnya dan tutupnya dilapisi serbet agar air tidak menetes ke brownies.
+8. Setelah matang, angkat dan biarkan dingin sebelum dipotong dan disajikan.
+
+
+**Tips:**
+
+* Untuk hasil yang lebih lembut, bisa ditambahkan 1 butir telur dan sedikit minyak sayur ke dalam adonan.
+* Sesuaikan waktu pengukusan tergantung pada ukuran loyang dan panas kompor Anda.  Tusuk brownies dengan tusuk gigi, jika sudah tidak lengket, berarti sudah matang.
+
+
+By Chef SaveBite
+
+"}} 
+[2025-06-08 10:14:24] local.INFO: Chat request received: {"message":"resep brownies"} 
+[2025-06-08 10:14:28] local.INFO: Chat response received: {"status":200,"body":"{\"response\":\"Selamat siang!  Berikut resep brownies dari SaveBite, perusahaan yang peduli akan keamanan pangan Anda.\\n\\n**Resep Brownies Klasik**\\n\\n**Bahan:**\\n\\n* 100 gram margarin, dilelehkan\\n* 150 gram cokelat masak hitam, dilelehkan\\n* 200 gram gula pasir\\n* 2 butir telur\\n* 1 sendok teh ekstrak vanili\\n* 100 gram tepung terigu protein sedang\\n* 50 gram cokelat bubuk\\n* 1/4 sendok teh baking powder\\n* Sejumput garam\\n\\n**Cara Membuat:**\\n\\n1. Panaskan oven pada suhu 175 derajat Celcius. Siapkan loyang persegi 20x20 cm, olesi dengan margarin dan taburi sedikit tepung terigu.\\n2. Dalam wadah, kocok gula pasir dan telur hingga mengembang dan pucat.\\n3. Masukkan ekstrak vanili, aduk rata.\\n4. Campur tepung terigu, cokelat bubuk, baking powder, dan garam. Aduk rata.\\n5. Tuang campuran cokelat leleh dan margarin leleh ke dalam adonan telur. Aduk rata.\\n6. Masukkan campuran tepung secara bertahap ke dalam adonan basah. Aduk hingga tercampur rata, jangan sampai overmix.\\n7. Tuang adonan ke dalam loyang yang sudah disiapkan.\\n8. Panggang selama 25-30 menit, atau hingga brownies matang dan tusuk gigi yang ditancapkan keluar bersih.\\n9. Biarkan brownies dingin di dalam loyang sebelum dipotong dan disajikan.\\n\\n\\n**Ketahanan di suhu ruang:**  4-6 jam.\\n\\n**Ketahanan di kulkas:** 3-4 hari dalam wadah tertutup rapat.\\n\\n**Tips penyimpanan:** Simpan brownies dalam wadah kedap udara di suhu ruang untuk jangka waktu singkat atau di dalam kulkas untuk jangka waktu lebih lama. Hindari menyimpan brownies di tempat yang lembap atau terkena sinar matahari langsung.  Untuk menjaga kualitas dan keamanan pangan, selalu perhatikan kondisi brownies sebelum dikonsumsi. Jika terdapat perubahan tekstur, warna, atau bau yang tidak sedap, sebaiknya brownies tidak dikonsumsi.\\n\\nSemoga resep ini bermanfaat!  Jika Anda memiliki pertanyaan lebih lanjut mengenai keamanan pangan atau resep lainnya, jangan ragu untuk bertanya.\\n\"}"} 
+[2025-06-08 10:15:13] local.INFO: Recipe request: {"ingredients":[{"id":28,"quantity":1},{"id":29,"quantity":1},{"id":30,"quantity":1},{"id":31,"quantity":1},{"id":32,"quantity":1},{"id":33,"quantity":1}]} 
+[2025-06-08 10:15:16] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"Berikut resep sederhana yang bisa dibuat dengan bahan-bahan yang Anda sebutkan.  Karena hanya ada sedikit bahan, ini akan menjadi kue coklat sederhana.  Anda mungkin perlu menyesuaikan takaran sesuai ukuran bahan yang Anda miliki.
+
+
+**Kue Coklat Sederhana**
+
+**Bahan:**
+
+* 1 buah coklat batangan (lelehkan) – sekitar 100 gram
+* 1 cangkir tepung terigu serbaguna
+* 1 sdt ragi instan (baking powder)
+* 1 sdm susu bubuk
+* 1 butir telur
+* 1/2 cangkir gula pasir (sesuaikan selera)
+
+
+**Cara Membuat:**
+
+1. Panaskan oven pada suhu 175°C (350°F). Olesi dan taburi tepung pada loyang kecil (ukuran sekitar 8x8 inci atau sesuai ketersediaan).
+2. Dalam wadah, kocok telur dan gula hingga sedikit mengembang.
+3. Masukkan coklat leleh dan aduk rata.
+4. Campur tepung terigu, ragi, dan susu bubuk dalam wadah terpisah.
+5. Secara bertahap, masukkan campuran tepung kering ke dalam campuran basah, aduk hingga tercampur rata.  Jangan terlalu banyak mengaduk.
+6. Tuang adonan ke dalam loyang yang sudah disiapkan.
+7. Panggang selama 20-25 menit, atau hingga tusuk gigi yang ditancapkan keluar bersih.
+8. Biarkan kue dingin di dalam loyang sebelum dipotong dan disajikan.
+
+
+**Catatan:** Resep ini sangat dasar.  Anda bisa menambahkan sedikit vanili ekstrak untuk menambah cita rasa.  Jika ingin kue yang lebih lembap, tambahkan 1-2 sendok makan susu cair.
+
+By Chef SaveBite
+
+"}} 
+[2025-06-08 10:17:14] local.INFO: Recipe request: {"ingredients":[{"id":28,"quantity":1},{"id":29,"quantity":1},{"id":30,"quantity":1},{"id":31,"quantity":1},{"id":32,"quantity":1},{"id":33,"quantity":1},{"id":34,"quantity":1}]} 
+[2025-06-08 10:17:18] local.INFO: Recipe API response: {"status":200,"body":{"recipe":"## Brownies Coklat Lembut (Resep Sederhana)
+
+Resep ini menggunakan bahan-bahan dasar yang umum dan menghasilkan brownies coklat yang lembut dan lezat.  Kuantitas bahan disesuaikan dengan ukuran masing-masing bahan yang Anda miliki (asumsikan semua bahan dalam takaran yang sebanding).
+
+**Bahan-bahan:**
+
+* 1 buah Coklat (dark, milk, atau compound chocolate), dilelehkan
+* 1 bungkus Tepung terigu protein sedang
+* 1 sdt Ragi instan (baking powder)
+* 1 sdm Susu bubuk
+* 1 butir Telur
+* 1 wadah Gula pasir (sesuaikan tingkat kemanisan)
+* 1 sdt Cake emulsifyer (SP)
+
+
+**Cara Membuat:**
+
+1. **Kocok telur dan gula:** Kocok telur dan gula hingga mengembang dan berwarna agak pucat.  Tambahkan SP dan kocok hingga tercampur rata.
+2. **Masukkan bahan kering:** Campur tepung dan ragi instan.  Ayak campuran tepung ke dalam adonan telur secara bertahap sambil diaduk rata menggunakan spatula atau whisk.  Aduk hingga tidak ada tepung yang menggumpal.
+3. **Tambahkan susu bubuk dan coklat leleh:** Masukkan susu bubuk dan coklat leleh ke dalam adonan. Aduk hingga semua bahan tercampur rata dan membentuk adonan yang kental.
+4. **Panggang:** Tuang adonan ke dalam loyang yang telah diolesi mentega dan dialasi kertas roti.  Panggang dalam oven yang telah dipanaskan sebelumnya dengan suhu 170-180 derajat Celcius selama 20-25 menit, atau hingga brownies matang dan matang sempurna (tes tusuk dengan lidi, jika lidi keluar bersih berarti brownies sudah matang).
+5. **Dinginkan:** Biarkan brownies dingin di dalam loyang sebelum dipotong dan disajikan.
+
+
+**Tips:**
+
+* Untuk hasil yang lebih maksimal, gunakan coklat berkualitas baik.
+* Anda bisa menambahkan kacang-kacangan cincang atau chocochips ke dalam adonan.
+* Waktu memanggang bisa bervariasi tergantung oven yang digunakan.
+
+
+Selamat mencoba!
+
+by Chef SaveBite
+
+"}} 

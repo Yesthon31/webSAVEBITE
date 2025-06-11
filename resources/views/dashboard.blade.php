@@ -13,511 +13,532 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <style>
+        :root {
+            --primary-green: #4CAF50;
+            --light-green: #81C784;
+            --white: #ffffff;
+            --gray-bg: #f5f5f5;
+            --text-dark: #333333;
+            --danger: #f44336;
+            --warning: #ff9800;
+            --success: #4caf50;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background: #474E68;
-            color: #232946;
+            background: var(--gray-bg);
+            color: var(--text-dark);
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            overflow-y: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            overflow-y: auto;
+        }
+
+        .main-wrapper {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
         }
 
         .header {
-            border-radius: 0px;
-            background: #404258;
-            box-shadow:  -43px 43px 100px #0d142c;
-            color: #fff;
-            width: 100%;
-            padding: 28px 0 22px 0;
-            text-align: center;
-            position: relative;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header h1 {
-            font-size: 3.5em;
-            margin: 0;
-            letter-spacing: 2px;
-            font-weight: 700;
-            animation: fadeInDown 1.5s ease-in-out;
-            text-shadow: 0 2px 12px rgba(35,49,66,0.08);
-        }
-
-        .description {
-            font-size: 1.2em;
-            color: #232946;
-            text-align: center;
-            padding: 24px;
-            margin-top: 90px;
-            margin-bottom: 24px;
-            max-width: 700px;
-            border-radius: 24px;
-            background: linear-gradient(225deg,rgb(253, 253, 253), #d6d9dd);
-            box-shadow: 0px 3px 40px rgba(248, 243, 243, 0.73);
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        .button-container {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 2rem;
             display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 36px;
-            flex-wrap: wrap;
-        }
-
-        .dashboard-button {
-            background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
-            color: #fff;
-            padding: 22px 38px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 16px;
-            cursor: pointer;
-            transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s;
-            width: 250px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 8px 28px rgba(62,111,244,0.13);
-            position: relative;
-            overflow: hidden;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .dashboard-button:hover {
-            background: linear-gradient(90deg, #5be9b9 0%, #3e6ff4 100%);
-            color: #232946;
-            transform: scale(1.08);
-            box-shadow: 0 16px 32px rgba(91,233,185,0.15);
-        }
-
-        .dashboard-button i {
-            margin-right: 12px;
-            font-size: 1.5em;
-        }
-
-        .footer {
-            margin-top: 48px;
-            font-size: 1em;
-            color:rgb(216, 218, 219);
-            text-align: center;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        .footer a {
-            color: #3e6ff4;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-
-        .footer a:hover {
-            color: #5be9b9;
-            text-decoration: underline;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        #calendar {
-            width: 82%;
-            height: 60vh;
-            margin: 130px auto 24px;
-            border-radius: 22px;
-            background: linear-gradient(225deg,rgb(253, 253, 253), #d6d9dd);
-            box-shadow: 0px 3px 40px rgba(248, 243, 243, 0.73);
-            box-sizing: border-box;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }   
-
-        .alert {
-            padding: 18px;
-            background: linear-gradient(225deg,rgb(253, 253, 253), #d6d9dd);
-            color: #232946;
-            border-radius: 10px;
-            margin-top: 60px;
-            width: 90vw;
-            max-width: 700px;
-            box-sizing: border-box;
-            box-shadow: 0px 3px 40px rgba(248, 243, 243, 0.73);
-            font-size: 1.08em;
-            font-weight: 500;
-        }
-
-        .logout-button {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-        }
-
-        .dashboard-button.logout {
-            background: linear-gradient(90deg, #ff4b4b 0%, #ff8f8f 100%);
-            padding: 12px 24px;
-            width: auto;
-            font-size: 1em;
-        }
-
-        .dashboard-button.logout:hover {
-            background: linear-gradient(90deg, #ff8f8f 0%, #ff4b4b 100%);
-        }
-
-        @media (max-width: 900px) {
-            #calendar {
-                width: 98%;
-            }
-            .description {
-                margin-top: 120px;
-            }
-        }
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2.1em;
-            }
-            .description {
-                font-size: 1em;
-                padding: 12px;
-            }
-            .dashboard-button {
-                width: 98vw;
-                font-size: 1em;
-                padding: 16px 0;
-            }
-            #calendar {
-                margin-top: 140px;
-            }
-            .logout-button {
-                position: static;
-                margin-top: 10px;
-                transform: none;
-                text-align: center;
-            }
-            .dashboard-button.logout {
-                width: auto;
-                display: inline-block;
-            }
-        }
-
-        /* Chat Styles */
-        .chat-wrapper {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-            width: auto;
-            margin: 0;
-        }
-
-        .chat-toggle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
-            border: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(62,111,244,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .chat-toggle:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 16px rgba(62,111,244,0.4);
-        }
-        .chat-container {
-            position: absolute;
-            bottom: 80px;
-            left: 0;
-            width: 450px;
-            height: 500px;
-            border-radius: 22px;
-            background: linear-gradient(225deg,rgb(253, 253, 253), #d6d9dd);
-            box-shadow: 0px 3px 40px rgba(248, 243, 243, 0.73);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        @media screen and (max-width: 768px) {
-            .chat-container {
-                width: 400px;
-            }
-        }
-
-        .chat-container.active {
-            display: flex;
-        }
-
-        .chat-header {
-            background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
-            padding: 15px 20px;
-            border-radius: 22px 22px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chat-header-icon {
-            font-size: 24px;
-        }
-
-        .chat-header-info h3 {
-            color: white;
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .chat-header-info p {
-            color: rgba(255, 255, 255, 0.9);
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
-
-        .chat-messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .chat-input-container {
-            display: flex;
-            padding: 1rem;
-            border-top: 1px solid #ddd;
-            background: #f8f9fa;
-            border-radius: 0 0 22px 22px;
-        }
-
-        .chat-input {
-            flex: 1;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            margin-right: 0.5rem;
-            font-size: 1em;
-            background: white;
-        }
-
-        .chat-send-button {
-            padding: 0.75rem 1.5rem;
-            background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .chat-send-button:hover {
-            background: linear-gradient(90deg, #5be9b9 0%, #3e6ff4 100%);
-            transform: scale(1.05);
-        }
-
-        .message {
-            padding: 0.75rem 1rem;
-            border-radius: 12px;
-            max-width: 80%;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .user-message {
-            background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
-            color: white;
-            align-self: flex-end;
-            margin-left: 20%;
-        }
-
-        .bot-message {
-            background: white;
-            color: #232946;
-            align-self: flex-start;
-            margin-right: 20%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .loading-message {
-            color: #6c757d;
-            padding: 0.75rem;
-            display: none;
-        }
-
-        .loading-message::after {
-            content: "...";
-            animation: loading 1s infinite;
-        }
-
-        @keyframes loading {
-            0% { content: "."; }
-            33% { content: ".."; }
-            66% { content: "..."; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 900px) {
-            .chat-wrapper {
-                width: 98%;
-            }
-        }
-
-        .info-section {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 8px;
-            align-items: flex-start;
-        }
-
-        .info-icon {
-            font-size: 1.5em;
-            min-width: 30px;
-            text-align: center;
-        }
-
-        .info-content {
-            flex: 1;
-            line-height: 1.5;
-        }
-
-        .info-content strong {
-            color: #3e6ff4;
-            display: inline-block;
-            margin-bottom: 4px;
-        }
-
-        .bot-message .info-section:not(:last-child) {
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding-bottom: 8px;
-        }
-
-        .message {
-            padding: 1rem;
-            border-radius: 12px;
-            max-width: 85%;
-            margin-bottom: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .user-message {
-            background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
-            color: white;
-            align-self: flex-end;
-            margin-left: 15%;
+        .header h1 {
+            font-size: 1.8em;
+            margin: 0;
+            font-weight: 600;
         }
 
-        .bot-message {
-            background: white;
-            color: #232946;
-            align-self: flex-start;
-            margin-right: 15%;
+        .logout-btn {
+            background: var(--white);
+            color: var(--text-dark);
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .chat-messages {
-            padding: 1.5rem;
+        .logout-btn:hover {
+            background: #f1f1f1;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .main-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .calendar-container {
+            background: var(--white);
+            border-radius: 10px;
+            padding: var(--spacing-md);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .right-panel {
             display: flex;
             flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .loading-message {
-            color: #6c757d;
-            padding: 1rem;
-            display: none;
+        .welcome-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: var(--spacing-md);
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .welcome-card h2 {
+            color: var(--text-dark);
+            margin: 0;
+            font-size: 1.6em;
+            line-height: 1.4;
+            }
+
+        .welcome-card h2 strong {
+            color: var(--primary-green);
+            }
+
+        .welcome-card p {
+            margin: var(--spacing-sm) 0 0;
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }   
+
+        .notification-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: var(--spacing-md);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--warning);
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+
+        .notification-card.has-alerts {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+            50% { box-shadow: 0 2px 20px rgba(255, 152, 0, 0.3); }
+            100% { box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+        }
+
+        .notification-card h3 {
+            color: var(--warning);
+            margin: 0;
+            font-size: 1.3em;
+            display: flex;
             align-items: center;
-            gap: 8px;
+            gap: var(--spacing-xs);
         }
 
-        .loading-message::after {
-            content: "...";
-            animation: loading 1.5s infinite;
+        .notification-card h3 i {
+            font-size: 1.2em;
         }
 
-        @keyframes loading {
-            0% { content: "."; }
-            33% { content: ".."; }
-            66% { content: "..."; }
+        .notification-item {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid #eee;
+            gap: var(--spacing-sm);
+        }
+
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+
+        .notification-icon {
+            font-size: 1.2em;
+        }
+
+        .notification-icon.expired {
+            color: var(--danger);
+        }
+
+        .notification-icon.warning {
+            color: var(--warning);
+        }
+
+        .notification-content {
+            flex: 1;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+
+        .notification-content strong {
+            font-weight: 600;
+        }
+
+        .action-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .action-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .action-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,rgb(170, 218, 164, 0.2) 0%, rgba(91, 233, 185, 0.2) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-8px);
+            border-color: rgb(170, 218, 164);
+            box-shadow: 
+                0 15px 25px rgba(170, 218, 164, 0.2),
+                0 0 15px rgba(91, 233, 185, 0.1);
+        }
+
+        .action-card:hover::before {
+            opacity: 1;
+        }
+
+        .action-card i {
+            font-size: 2em;
+            color: rgb(170, 218, 164);
+            transition: all 0.4s ease;
+            position: relative;
+            background: linear-gradient(90deg,rgb(170, 218, 164) 0%, #5be9b9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .action-card:hover i {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .action-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .action-card:hover h3 {
+            background: linear-gradient(90deg,rgb(170, 218, 164) 0%, #5be9b9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Calendar Customization */
+        .fc-day-grid-event {
+            padding: 6px 8px !important;
+            border-radius: 6px !important;
+            margin: 2px 4px !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        .fc-day-grid-event:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+
+        .fc-day-grid-event .fc-content {
+            white-space: normal !important;
+            overflow: visible !important;
+            font-size: 0.9em !important;
+            line-height: 1.4 !important;
+        }
+
+        .fc-day-grid-event .fc-time {
+            font-weight: 600 !important;
+        }
+
+        .fc-today {
+            background: #E8F5E9 !important;
+            border: 2px solid var(--primary-green) !important;
+        }
+
+        .fc button {
+            height: auto !important;
+            padding: 8px 16px !important;
+            font-size: 0.9em !important;
+            font-weight: 500 !important;
+            text-transform: capitalize !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .fc button:hover {
+            background: var(--light-green) !important;
+            border-color: var(--light-green) !important;
+        }
+
+        .fc-toolbar h2 {
+            font-size: 1.5em !important;
+            padding: var(--spacing-sm) 0 !important;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .action-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .fc-day-grid-event .fc-content {
+                font-size: 0.85em !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --spacing-md: 1rem;
+                --spacing-lg: 1.5rem;
+            }
+
+            .header {
+                padding: 1rem;
+        }
+
+            .main-container {
+                padding: 1rem;
+            }
+
+            .action-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .fc-day-grid-event .fc-content {
+                font-size: 0.8em !important;
+        }
+
+            .welcome-card h2 {
+                font-size: 1.4em;
+            }
+
+            .welcome-card p {
+                font-size: 1em;
+            }
+        }
+
+        .footer {
+            flex-shrink: 0;
+            background: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+        }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .footer-social {
+                margin-top: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="main-wrapper">
     <div class="header">
         <h1>SaveBite</h1>
-        <div class="logout-button">
             <form action="{{ url('/logout') }}" method="POST" style="margin: 0;">
                 @csrf
-                <button type="submit" class="dashboard-button logout">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </button>
+                <button type="submit" class="logout-btn">Logout</button>
             </form>
+        </div>
+
+        <div class="main-container">
+            <div class="calendar-container">
+                <div id="calendar"></div>
+    </div>
+
+            <div class="right-panel">
+                <div class="welcome-card">
+                    <h2>Welcome to the <strong>SaveBite Dashboard</strong>!</h2>
+                    <p>Track your food inventory, manage expiration dates, and reduce food waste efficiently.</p>
+    </div>
+
+                <div class="notification-card">
+                    <h3><i class="fas fa-bell"></i> Perhatian!</h3>
+                    <div class="notification-content">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="action-cards">
+                    <a href="{{ url('/recipes') }}" class="action-card" data-tooltip="View your cooking history and saved recipes">
+                        <i class="fas fa-history"></i>
+                        <h3>History Recipes</h3>
+                    </a>
+                    <a href="{{ url('/foods/add') }}" class="action-card" data-tooltip="Add new items to your food inventory">
+                        <i class="fas fa-plus"></i>
+                        <h3>Add New Food</h3>
+                    </a>
+                    <a href="{{ url('/foods') }}" class="action-card" data-tooltip="View and manage your food inventory">
+                        <i class="fas fa-utensils"></i>
+                        <h3>View Food Data</h3>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="description">
-        <p>Welcome to the <strong>SaveBite Dashboard</strong>! Manage your food data, track expiration dates, and keep your food fresh with ease.</p>
-    </div>
-
-    <div id="notification-area"></div>
-    <div id="calendar"></div>
-
-    <div class="button-container">
-        <a href="{{ url('/recipes') }}" style="text-decoration: none;">
-            <button class="dashboard-button">
-                <i class="fas fa-utensils"></i> History Recipes
-            </button>
-        </a>
-        <a href="{{ url('/foods/add') }}" style="text-decoration: none;">
-            <button class="dashboard-button">
-                <i class="fas fa-plus-circle"></i> Add New Food
-            </button>
-        </a>
-        <a href="{{ url('/foods') }}" style="text-decoration: none;">
-            <button class="dashboard-button">
-                <i class="fas fa-eye"></i> View Food Data
-            </button>
-        </a>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2025 <a href="https://www.youtube.com/watch?v=2e0BMACvymo" target="_blank">SaveBite</a>. All rights reserved.</p>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="/" class="footer-logo">SaveBite</a>
+                <span>&copy; 2025 All rights reserved</span>
+            </div>
+            <div class="footer-links">
+                <a href="/about" class="footer-link">About Us</a>
+                <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <a href="/terms" class="footer-link">Terms of Service</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Layout chat ai -->
     @include('layouts.chat')
@@ -525,7 +546,27 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
         $(document).ready(function() {
-            const calendar = $('#calendar').fullCalendar({
+            // Initialize tooltips
+            $('.action-card').hover(function(e) {
+                const tooltip = $('<div class="tooltip"></div>');
+                tooltip.text($(this).data('tooltip'));
+                $('body').append(tooltip);
+                
+                const card = $(this);
+                const cardOffset = card.offset();
+                const tooltipWidth = tooltip.outerWidth();
+                
+                tooltip.css({
+                    top: cardOffset.top - tooltip.outerHeight() - 10,
+                    left: cardOffset.left + (card.outerWidth() - tooltipWidth) / 2,
+                    opacity: 1
+                });
+            }, function() {
+                $('.tooltip').remove();
+            });
+
+            // Calendar initialization with enhanced event rendering
+            $('#calendar').fullCalendar({
                 header: {
                     left: 'prev,next today',
                     center: 'title',
@@ -535,7 +576,24 @@
                 eventLimit: true,
                 height: 'auto',
                 contentHeight: 'auto',
-                events: fetchEvents
+                events: fetchEvents,
+                themeSystem: 'standard',
+                eventColor: '#4CAF50',
+                eventTextColor: '#ffffff',
+                eventBorderColor: '#388E3C',
+                eventRender: function(event, element) {
+                    element.css('cursor', 'pointer');
+                    
+                    // Add hover effect
+                    element.hover(function() {
+                        $(this).css({
+                            transform: 'scale(1.02)',
+                            transition: 'transform 0.2s ease'
+                        });
+                    }, function() {
+                        $(this).css('transform', 'scale(1)');
+                    });
+                }
             });
 
             function fetchEvents(start, end, timezone, callback) {
@@ -551,6 +609,7 @@
 
                         const now = new Date();
                         let notifications = [];
+                        let hasExpired = false;
 
                         const events = data.map(food => {
                             if (!food || !food.expiry_date || !food.name) {
@@ -565,31 +624,59 @@
 
                             const diffDays = Math.floor((expiry - now) / (1000 * 60 * 60 * 24));
 
-                            let color = '#43cea2'; // hijau
+                            let color = '#4CAF50'; // Fresh - Green
                             if (diffDays < 0) {
-                                color = '#ff4d4d'; // merah
-                                notifications.push(`❌ <strong>${food.name}</strong> sudah expired!`);
+                                color = '#F44336'; // Expired - Red
+                                hasExpired = true;
+                                notifications.push(`
+                                    <div class="notification-item">
+                                        <i class="fas fa-times-circle notification-icon expired"></i>
+                                        <div class="notification-content">
+                                            <strong>${food.name}</strong> has expired ${Math.abs(diffDays)} days ago
+                                        </div>
+                                    </div>
+                                `);
                             } else if (diffDays <= 14) {
-                                color = '#ffb347'; // oranye
-                                notifications.push(`⚠️ <strong>${food.name}</strong> akan expired dalam ${diffDays} hari.`);
+                                color = '#FF9800'; // Warning - Orange
+                                notifications.push(`
+                                    <div class="notification-item">
+                                        <i class="fas fa-exclamation-triangle notification-icon warning"></i>
+                                        <div class="notification-content">
+                                            <strong>${food.name}</strong> will expire in ${diffDays} days
+                                        </div>
+                                    </div>
+                                `);
                             }
 
                             return {
                                 title: food.name,
                                 start: food.expiry_date,
-                                color: color
+                                color: color,
+                                borderColor: color,
+                                className: 'food-event'
                             };
                         }).filter(event => event !== null);
 
-                        const notifArea = $('#notification-area');
+                        const notifCard = $('.notification-card');
+                        const notifContent = notifCard.find('.notification-content');
+                        
                         if (notifications.length > 0) {
-                            notifArea.html(
-                                `<div class="alert alert-warning" role="alert">
-                                    <strong>Perhatian!</strong><br>${notifications.join('<br>')}
-                                 </div>`
-                            );
+                            notifContent.html(notifications.join(''));
+                            notifCard.addClass('has-alerts');
+                            if (hasExpired) {
+                                notifCard.css('border-left-color', '#F44336');
+                                notifCard.find('h3').css('color', '#F44336');
+                            }
                         } else {
-                            notifArea.html('');
+                            notifContent.html(`
+                                <div class="notification-item">
+                                    <i class="fas fa-check-circle notification-icon" style="color: var(--success)"></i>
+                                    <div class="notification-content">
+                                        No food items expiring soon
+                                    </div>
+                                </div>
+                            `);
+                            notifCard.removeClass('has-alerts');
                         }
 
                         callback(events);
@@ -597,6 +684,7 @@
                 });
             }
 
+            // Refresh events every 10 minutes
             setInterval(function() {
                 $('#calendar').fullCalendar('refetchEvents');
             }, 600000);

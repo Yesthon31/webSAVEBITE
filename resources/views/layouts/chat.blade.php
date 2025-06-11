@@ -1,6 +1,16 @@
 <!-- Chat AI Component -->
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <div class="chat-wrapper">
-    <button class="chat-toggle" id="chatToggle">AI</button>
+    <button class="chat-toggle" id="chatToggle">
+        <dotlottie-player 
+            src="https://lottie.host/b10b46da-80c4-4892-a565-b09d320c7e98/t6gnbS3ODs.lottie" 
+            background="transparent" 
+            speed="1" 
+            style="width: 150px; height: 150px" 
+            loop 
+            autoplay
+        ></dotlottie-player>
+    </button>
     <div class="chat-container" id="chatContainer">
         <div class="chat-header">
             <div class="chat-header-icon">🤖</div>
@@ -22,33 +32,30 @@
 <style>
     .chat-wrapper {
         position: fixed;
-        bottom: 20px;
-        left: 20px;
+        bottom: 40px;
+        left: 40px;
         z-index: 1000;
         width: auto;
         margin: 0;
     }
 
     .chat-toggle {
-        width: 60px;
-        height: 60px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
+        background: transparent;
         border: none;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 12px rgba(62,111,244,0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 0;
+        transition: transform 0.3s ease;
+        overflow: hidden;
     }
 
     .chat-toggle:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 16px rgba(62,111,244,0.4);
     }
 
     .chat-container {
@@ -76,7 +83,7 @@
     }
 
     .chat-header {
-        background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
+        background: linear-gradient(90deg,rgb(170, 218, 164) 0%, #5be9b9 100%);
         padding: 15px 20px;
         border-radius: 22px 22px 0 0;
         display: flex;
@@ -159,7 +166,7 @@
 
     .chat-send-button {
         padding: 0.75rem 1.5rem;
-        background: linear-gradient(90deg, #3e6ff4 0%, #5be9b9 100%);
+        background: linear-gradient(90deg,rgb(170, 218, 164) 0%, #5be9b9 100%);
         color: white;
         border: none;
         border-radius: 12px;

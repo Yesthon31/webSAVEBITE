@@ -4,190 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        :root {
+            --primary-green: #4CAF50;
+            --light-green: #81C784;
+            --white: #ffffff;
+            --gray-bg: #f5f5f5;
+            --text-dark: #333333;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #474E68;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--gray-bg);
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
-            background: #404258;
-            color: white;
+            background: var(--white);
+            color: var(--text-dark);
             text-align: center;
-            padding: 40px 10px 25px 10px;
-            font-size: 2.2rem;
-            box-shadow: 0 4px 16px rgba(62, 180, 137, 0.13);
-            border-radius: 0 0 30px 30px;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin: 0;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        header h1 i {
+            color: var(--primary-green);
+        }
+
+        header .subtitle {
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 1.1em;
         }
 
         .container {
-            width: 90%;
             max-width: 900px;
-            margin: 30px auto 0 auto;
-            padding: 20px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
         }
 
         .recipe-card {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(62, 180, 137, 0.08);
-            margin: 24px 0;
-            padding: 28px 24px 20px 24px;
-            transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
-            border-left: 6px solid #3aafa9;
-            position: relative;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1);
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
         }
 
         .recipe-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 8px 32px rgba(62, 180, 137, 0.16);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.15);
         }
 
         .recipe-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #205072;
-            margin-bottom: 8px;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .recipe-title i {
-            color: #4ecca3;
-            font-size: 1.3em;
+            color: var(--primary-green);
         }
 
-        .recipe-info {
-            margin-top: 10px;
-            font-size: 1.08rem;
-            color: #444;
+        .recipe-content {
+            color: #666;
             line-height: 1.6;
+            font-size: 1em;
+            white-space: pre-line;
         }
 
-        button[type="submit"], .back button, .dashboard-btn {
-            background: linear-gradient(90deg, #3aafa9 0%, #4ecca3 100%);
-            color: white;
-            padding: 10px 24px;
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .btn {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 10px 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1em;
             font-weight: 500;
-            box-shadow: 0 2px 8px rgba(62, 180, 137, 0.13);
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        button[type="submit"]:hover, .back button:hover, .dashboard-btn:hover {
-            background: linear-gradient(90deg, #4ecca3 0%, #3aafa9 100%);
-            transform: scale(1.06);
-        }
-
-        button[type="submit"]:active, .back button:active, .dashboard-btn:active {
-            background: #205072;
-            transform: scale(1);
-        }
-
-        .error-message {
-            color: #e17055;
-            text-align: center;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .back {
-            display: flex;
-            justify-content: start;
-            margin-left: 0;
-            margin-top: 30px;
-        }
-
-        .back i {
-            margin-right: 7px;
-        }
-
-        .dashboard-btn {
-            position: absolute;
-            top: 24px;
-            left: 24px;
-            z-index: 10;
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 8px;
+            transition: all 0.3s ease;
         }
 
-        @media (max-width: 600px) {
+        .btn:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+        }
+
+        .btn-delete {
+            background: #f44336;
+        }
+
+        .btn-delete:hover {
+            background: #d32f2f;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .empty-message i {
+            font-size: 2em;
+            color: var(--primary-green);
+        }
+
+        @media (max-width: 768px) {
             .container {
-                width: 98%;
-                padding: 8px;
+                margin: 1rem;
             }
-            .recipe-card {
-                padding: 16px 8px 12px 12px;
+
+            header {
+                padding: 1.5rem 1rem;
             }
-            .dashboard-btn {
-                top: 10px;
-                left: 10px;
-                padding: 8px 14px;
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
 </head>
-<body >
-    <header style=" text-align:center; padding: 24px 0; border-radius:0 0 12px 12px;">
-        <h1 style="font-family: 'Arial Black', Arial, sans-serif; font-size:2rem; margin:0; color:#dae1ed;">
-            <i class="fa fa-book-open"></i> Daftar Resep
+<body>
+    <header>
+        <h1>
+            <i class="fas fa-book-open"></i>
+            Recipe List
         </h1>
-        <div style="font-size:1rem; color:#c4c8cfI. ;">Kumpulan resep favorit, simpel & lezat</div>
+        <div class="subtitle">Collection of your favorite recipes</div>
     </header>
 
-    <main style="max-width:600px; margin:32px auto; padding:0 12px;">
+    <div class="container">
         @if(session('error'))
-            <div style="background:#ffe0e0; color:#c0392b; padding:10px 16px; border-radius:6px; margin-bottom:18px; text-align:center;">
+            <div style="background: #ffebee; color: #f44336; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
                 {{ session('error') }}
             </div>
         @endif
 
         @if(!empty($recipes))
             @foreach($recipes as $recipe)
-                <section style="background:#fffbe7; border:1px solid #ffe29a; border-radius:10px; margin-bottom:22px; box-shadow:0 2px 8px #ffe29a33;">
-                    <div style="padding:18px 16px;">
-                        <div style="font-weight:bold; font-size:1.15rem; color:#e17009; margin-bottom:8px;">
-                            <i class="fa fa-star"></i> {{ $recipe['title'] ?? 'Resep' }}
-                        </div>
-                        <div style="color:#444; font-size:1rem; line-height:1.6; margin-bottom:10px;">
-                            {!! nl2br(e($recipe['recipe'])) !!}
-                        </div>
-                        <form action="{{ route('recipes.delete', $recipe['id']) }}" method="POST" style="margin-top:10px;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" style="background:#e17009; color:#fff; border:none; border-radius:5px; padding:7px 18px; cursor:pointer;">
-                                <i class="fa fa-trash"></i> Hapus
-                            </button>
-                        </form>
+                <div class="recipe-card">
+                    <div class="recipe-title">
+                        <i class="fas fa-utensils"></i>
+                        {{ $recipe['title'] ?? 'Recipe' }}
                     </div>
-                </section>
+                    <div class="recipe-content">
+                        {!! nl2br(e($recipe['recipe'])) !!}
+                    </div>
+                    <form action="{{ route('recipes.delete', $recipe['id']) }}" method="POST" style="margin-top: 1rem;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-delete">
+                            <i class="fas fa-trash"></i> Delete Recipe
+                        </button>
+                    </form>
+                </div>
             @endforeach
         @else
-            <div style="text-align:center; color:#888; margin:40px 0;">
-                <i class="fa fa-exclamation-circle"></i> Belum ada resep yang tersedia.
+            <div class="empty-message">
+                <i class="fas fa-clipboard-list"></i>
+                <p>No recipes available yet.</p>
             </div>
         @endif
 
-        <div style="display:flex; justify-content:space-between; margin-top:32px;">
-            <a href="{{ url('/dashboard') }}" style="text-decoration:none;">
-                <button style="background:#f7b731; color:#222; border:none; border-radius:5px; padding:8px 18px; font-weight:bold; cursor:pointer;">
-                    <i class="fa fa-home"></i> Dashboard
-                </button>
+        <div class="action-buttons">
+            <a href="{{ url('/dashboard') }}" class="btn">
+                <i class="fas fa-home"></i> Dashboard
             </a>
-            <a href="{{ url('/foods') }}" style="text-decoration:none;">
-                <button style="background:#f7b731; color:#222; border:none; border-radius:5px; padding:8px 18px; font-weight:bold; cursor:pointer;">
-                    <i class="fa fa-arrow-left"></i> Kembali ke Foods
-                </button>
+            <a href="{{ url('/foods') }}" class="btn">
+                <i class="fas fa-arrow-left"></i> Back to Foods
             </a>
         </div>
-    </main>
+    </div>
 </body>
 </html>
