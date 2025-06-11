@@ -547,7 +547,7 @@
         $('#delete-confirmation').html('<div class="loading">Deleting...</div>');
         if (foodToDelete !== null) {
             $.ajax({
-                url: '{{ url('/foods') }}/' + foodToDelete,
+                url: '/foods/' + foodToDelete,
                 method: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
