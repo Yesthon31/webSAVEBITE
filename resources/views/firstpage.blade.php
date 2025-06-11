@@ -191,6 +191,123 @@
             }
         }
 
+        @media (max-width: 480px) {
+            #text {
+                font-size: clamp(3rem, 8vw, 8rem);
+                transform: translateY(-30px);
+            }
+
+            .tagline {
+                font-size: 0.9rem;
+                margin-top: -1rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .hero-btn {
+                padding: 0.7rem 1.8rem;
+                font-size: 0.9rem;
+                width: 180px;
+            }
+
+            .features-title,
+            .about-title,
+            .auth-title {
+                font-size: clamp(1.8rem, 4vw, 2.5rem);
+                margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+            }
+
+            .feature-card {
+                padding: clamp(1rem, 3vw, 2rem);
+            }
+
+            .feature-title {
+                font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+            }
+
+            .feature-description {
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
+            }
+
+            .feature-icon {
+                font-size: clamp(1.8rem, 4vw, 2.2rem);
+            }
+
+            .auth-container {
+                padding: 2rem 1.5rem;
+                margin: 2rem auto;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature-item {
+                gap: 1rem;
+            }
+
+            .feature-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .feature-icon i {
+                font-size: 1.3rem;
+            }
+
+            .feature-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .feature-content p {
+                font-size: 0.9rem;
+            }
+
+            .about-description {
+                font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+            }
+
+            .about-point {
+                padding: 1.5rem;
+            }
+
+            .about-point i {
+                font-size: 1.8rem;
+            }
+
+            .about-point h3 {
+                font-size: 1.2rem;
+            }
+
+            .about-point p {
+                font-size: 0.9rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-col h3 {
+                font-size: 1.3rem;
+            }
+
+            .footer-col p,
+            .footer-links a,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+
+            .social-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .social-icon i {
+                font-size: 1rem;
+            }
+        }
+
         section img{
             position: absolute;
             top: 0;
@@ -731,9 +848,7 @@
                     <h2 class="about-title">Apa itu SaveBite?</h2>
                     <p class="about-description">
                         SaveBite adalah platform inovatif yang dirancang untuk membantu Anda mengelola 
-                        makanan dengan lebih bijak dan efisien. Dengan menggunakan teknologi modern dan 
-                        sistem manajemen yang cerdas, kami membantu Anda mengurangi pemborosan makanan, 
-                        menghemat uang, dan berkontribusi pada lingkungan yang lebih berkelanjutan.
+                        makanan dengan lebih bijak dan efisien.
                     </p>
                     <div class="about-points">
                         <div class="about-point">

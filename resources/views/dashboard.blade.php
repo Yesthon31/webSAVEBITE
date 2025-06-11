@@ -363,7 +363,7 @@
 
             .header {
                 padding: 1rem;
-        }
+            }
 
             .main-container {
                 padding: 1rem;
@@ -375,7 +375,7 @@
 
             .fc-day-grid-event .fc-content {
                 font-size: 0.8em !important;
-        }
+            }
 
             .welcome-card h2 {
                 font-size: 1.4em;
@@ -383,6 +383,55 @@
 
             .welcome-card p {
                 font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .logout-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.9em;
+            }
+            .main-container {
+                padding: 0.5rem;
+                gap: 1rem;
+            }
+            .calendar-container {
+                padding: var(--spacing-sm);
+            }
+            .right-panel {
+                gap: 1rem;
+            }
+            .welcome-card h2 {
+                font-size: 1.2em;
+            }
+            .welcome-card p {
+                font-size: 0.9em;
+            }
+            .notification-card h3 {
+                font-size: 1.1em;
+            }
+            .notification-item {
+                font-size: 0.9em;
+            }
+            .action-card {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+            .action-card i {
+                font-size: 1.8em;
+            }
+            .action-card h3 {
+                font-size: 1.1em;
+            }
+            .fc-toolbar h2 {
+                font-size: 1.2em !important;
+            }
+            .fc button {
+                padding: 6px 12px !important;
+                font-size: 0.8em !important;
             }
         }
 
