@@ -187,7 +187,7 @@
             <p class="error">{{ session('error') }}</p>
         @endif
 
-        <form action="{{ url('/foods') }}" method="POST">
+        <form action="/foods" method="POST">
             @csrf
             <label for="name">Food Name</label>
             <input type="text" id="name" name="name" placeholder="Enter food name" required>

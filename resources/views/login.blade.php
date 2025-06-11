@@ -257,7 +257,7 @@
                 <h1>Selamat Datang</h1>
                 <p style="color: #666; margin-bottom: 30px;">Masuk ke akun Anda untuk melanjutkan</p>
 
-                <form action="{{ url('/login') }}" method="POST" class="login-form">
+                <form action="/login" method="POST" class="login-form">
                     @csrf
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -296,7 +296,7 @@
                 </form>
 
                 <div class="register-link">
-                    Belum punya akun? <a href="{{ url('/register') }}">Daftar Sekarang</a>
+                    Belum punya akun? <a href="/register">Daftar Sekarang</a>
                 </div>
             </div>
         </div>

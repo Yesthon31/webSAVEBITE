@@ -502,7 +502,7 @@
             `).fadeIn();
 
             $.ajax({
-                url: '{{ url('/recipe') }}',
+                url: '/recipe',
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}',
