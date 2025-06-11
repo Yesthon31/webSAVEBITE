@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://web-production-56c4.up.railway.app'),
 
-    'golang_api' => env('GOLANG_API', 'http://localhost:8080'),
+    'golang_api' => env('GOLANG_API', 'https://golangtes-production.up.railway.app'),
 
     'asset_url' => env('ASSET_URL'),
 
