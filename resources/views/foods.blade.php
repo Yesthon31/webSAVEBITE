@@ -362,7 +362,7 @@
     </style>
 </head>
 <body>
-    <a href="{{ url('/dashboard') }}" class="back-button">
+    <a href="/dashboard" class="back-button">
         <i class="fas fa-arrow-left"></i> Back
     </a>
 
@@ -548,10 +548,9 @@
         if (foodToDelete !== null) {
             $.ajax({
                 url: '/foods/' + foodToDelete,
-                method: 'POST',
+                method: 'DELETE',
                 data: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                    _method: 'DELETE'
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
                 success: function(response) {
                     $('#delete-confirmation').html('<div class="success-message">Food deleted successfully!</div>');
