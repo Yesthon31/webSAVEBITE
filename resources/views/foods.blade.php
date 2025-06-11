@@ -549,7 +549,7 @@
             $.ajax({
                 url: '/foods/' + foodToDelete,
                 method: 'DELETE',
-                data: {
+                headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
                 success: function(response) {
