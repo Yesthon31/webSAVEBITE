@@ -470,7 +470,7 @@
     <div class="main-wrapper">
     <div class="header">
         <h1>SaveBite</h1>
-            <form action="{{ url('/logout') }}" method="POST" style="margin: 0;">
+            <form action="/logout" method="POST" style="margin: 0;">
                 @csrf
                 <button type="submit" class="logout-btn">Logout</button>
             </form>
