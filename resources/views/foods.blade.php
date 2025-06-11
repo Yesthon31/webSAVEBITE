@@ -547,7 +547,7 @@
         $('#delete-confirmation').html('<div class="loading">Deleting...</div>');
         if (foodToDelete !== null) {
             $.ajax({
-                url: '/foods/' + foodToDelete,
+                url: 'https://golangtes-production.up.railway.app/foods/' + foodToDelete,
                 method: 'DELETE',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
