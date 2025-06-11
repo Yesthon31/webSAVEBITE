@@ -197,7 +197,16 @@
                         {{ $recipe['title'] ?? 'Recipe' }}
                     </div>
                     <div class="recipe-content">
-                        {!! nl2br(e($recipe['recipe'])) !!}
+                        <?php
+                            $cleanedRecipe = $recipe['recipe'];
+                            // Remove bold/italic markers (**)
+                            $cleanedRecipe = str_replace('**', '', $cleanedRecipe);
+                            // Remove header markers (#)
+                            $cleanedRecipe = preg_replace('/^#+\s*/m', '', $cleanedRecipe);
+                            // Remove list item markers (* followed by a space at the beginning of a line)
+                            $cleanedRecipe = preg_replace('/^\*\s*/m', '', $cleanedRecipe);
+                        ?>
+                        {!! nl2br(e($cleanedRecipe)) !!}
                     </div>
                     <form action="{{ route('recipes.delete', $recipe['id']) }}" method="POST" style="margin-top: 1rem;">
                         @csrf
