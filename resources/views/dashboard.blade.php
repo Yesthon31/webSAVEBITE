@@ -36,7 +36,6 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            overflow-y: hidden;
             display: flex;
             flex-direction: column;
         }

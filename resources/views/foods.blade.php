@@ -335,6 +335,80 @@
             padding: 1rem;
         }
 
+        .selected-foods-summary {
+            position: sticky;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            max-width: 300px;
+            z-index: 1000;
+            display: none;
+            border: 1px solid rgba(75, 105, 48, 0.1);
+            margin-left: auto;
+            margin-bottom: 1rem;
+        }
+
+        .selected-foods-summary h3 {
+            color: var(--primary-green);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .selected-foods-list {
+            max-height: 200px;
+            overflow-y: auto;
+            margin: 0 0 1rem 0;
+            padding: 0;
+        }
+
+        .selected-foods-list li {
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .selected-foods-list li .quantity {
+            color: var(--primary-green);
+            font-weight: 500;
+        }
+
+        .summary-generate-btn {
+            width: 100%;
+            margin-top: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(75, 105, 48, 0.2);
+        }
+
+        .summary-generate-btn:hover {
+            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(75, 105, 48, 0.3);
+        }
+
+        .summary-generate-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
         @media (max-width: 768px) {
             .container {
                 margin: 20px;
@@ -358,6 +432,19 @@
 
             button[type="submit"] {
                 width: 100%;
+            }
+
+            .selected-foods-summary {
+                position: sticky;
+                top: 0;
+                right: 0;
+                left: 0;
+                max-width: none;
+                border-radius: 0;
+                margin: 0;
+                padding: 1rem;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
             }
         }
     </style>
@@ -392,6 +479,13 @@
     </h1>
 
     <div class="container" data-aos="fade-up">
+        <!-- Add Selected Foods Summary -->
+        <div class="selected-foods-summary">
+            <h3><i class="fas fa-clipboard-list"></i> Selected Foods</h3>
+            <ul class="selected-foods-list"></ul>
+            <button type="submit" class="summary-generate-btn" disabled>Generate Recipes</button>
+        </div>
+
         @if(session('error'))
             <div style="background: #ffebee; color: var(--danger); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
                 {{ session('error') }}
@@ -443,7 +537,6 @@
                         </li>
                     @endforeach
                 </ul>
-                <button type="submit">Generate Recipes</button>
             </form>
         @endif
         <div id="recipe-result" class="recipe-content" style="display: none;"></div>
@@ -452,7 +545,39 @@
     <script>
     AOS.init();
     $(document).ready(function() {
-        // Show/hide quantity input when checkbox is checked/unchecked
+        // Function to update selected foods summary
+        function updateSelectedFoodsSummary() {
+            var selectedFoods = [];
+            $('.food-checkbox:checked').each(function() {
+                var foodName = $(this).closest('.food-title').text().trim();
+                var quantity = $(this).closest('.food-info').find('.quantity-input').val();
+                selectedFoods.push({
+                    name: foodName,
+                    quantity: quantity
+                });
+            });
+
+            var summaryList = $('.selected-foods-list');
+            summaryList.empty();
+
+            if (selectedFoods.length > 0) {
+                selectedFoods.forEach(function(food) {
+                    summaryList.append(`
+                        <li>
+                            <span>${food.name}</span>
+                            <span class="quantity">x${food.quantity}</span>
+                        </li>
+                    `);
+                });
+                $('.selected-foods-summary').fadeIn();
+                $('.summary-generate-btn').prop('disabled', false);
+            } else {
+                $('.selected-foods-summary').fadeOut();
+                $('.summary-generate-btn').prop('disabled', true);
+            }
+        }
+
+        // Show/hide quantity input and update summary when checkbox is checked/unchecked
         $('.food-checkbox').change(function() {
             var quantityDiv = $(this).closest('.food-info').find('.recipe-quantity');
             if ($(this).is(':checked')) {
@@ -460,7 +585,21 @@
             } else {
                 quantityDiv.slideUp();
             }
+            updateSelectedFoodsSummary();
         });
+
+        // Update summary when quantity changes
+        $('.quantity-input').on('change input', function() {
+            updateSelectedFoodsSummary();
+        });
+
+        // Handle form submission using the summary generate button
+        $('.summary-generate-btn').click(function() {
+            $('#recipeForm').submit();
+        });
+
+        // Hide the original submit button
+        $('#recipeForm button[type="submit"]').hide();
 
         $('#recipeForm').submit(function(event) {
             event.preventDefault();
@@ -501,6 +640,11 @@
                     <div class="loading-text">Generating your recipe...</div>
                 </div>
             `).fadeIn();
+
+            // Auto scroll to recipe result with smooth animation
+            $('html, body').animate({
+                scrollTop: $('#recipe-result').offset().top - 20
+            }, 800);
 
             $.ajax({
                 url: '/recipe',
